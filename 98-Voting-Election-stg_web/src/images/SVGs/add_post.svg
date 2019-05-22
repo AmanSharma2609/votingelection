@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="230.881" height="259.342" viewBox="0 0 230.881 259.342">
+  <defs>
+    <filter id="Ellipse_423" x="125.604" y="154.064" width="105.277" height="105.278" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feFlood flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="add_post" transform="translate(15794 -2591)">
+    <path id="Exclusion_1" data-name="Exclusion 1" d="M208.333,231.482H0V0H208.333V231.481ZM30.093,140.046v17.361H174.769V140.046Zm0-46.3v17.361H174.769V93.75Zm0-46.3v17.36H116.9V47.454Z" transform="translate(-15794 2591)" fill="#e18f68"/>
+    <g id="add-button-inside-black-circle" transform="translate(-15662.056 2748.407)">
+      <g id="add-circle">
+        <g transform="matrix(1, 0, 0, 1, -131.94, -157.41)" filter="url(#Ellipse_423)">
+          <circle id="Ellipse_423-2" data-name="Ellipse 423" cx="45.139" cy="45.139" r="45.139" transform="translate(133.1 158.56)" fill="#fff"/>
+        </g>
+        <path id="Path_1288" data-name="Path 1288" d="M46.3,0a46.3,46.3,0,1,0,46.3,46.3A46.432,46.432,0,0,0,46.3,0ZM69.444,50.926H50.926V69.444H41.667V50.926H23.148V41.667H41.667V23.148h9.259V41.667H69.444Z" fill="#e18f68"/>
+      </g>
+    </g>
+  </g>
+</svg>

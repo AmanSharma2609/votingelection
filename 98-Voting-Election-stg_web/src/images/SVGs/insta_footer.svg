@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="250" height="250" viewBox="0 0 250 250">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.835" y1="0.803" x2="0.151" y2="0.184" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fec053"/>
+      <stop offset="0.33" stop-color="#f2203e"/>
+      <stop offset="0.65" stop-color="#b729a8"/>
+      <stop offset="1" stop-color="#5342d6"/>
+    </linearGradient>
+  </defs>
+  <g id="insta_footer" transform="translate(14368 -3504)">
+    <path id="Path_1285" data-name="Path 1285" class="cls-1" d="M41.691,0H208.313A41.826,41.826,0,0,1,250,41.691V208.313A41.825,41.825,0,0,1,208.313,250H41.691A41.823,41.823,0,0,1,0,208.313V41.691A41.824,41.824,0,0,1,41.691,0Z" transform="translate(-14368 3504)"/>
+    <g id="instagram" transform="translate(-14314.429 3557.572)">
+      <g id="Group_1365" data-name="Group 1365">
+        <g id="Group_1364" data-name="Group 1364">
+          <path id="Path_1260" data-name="Path 1260" class="cls-2" d="M98.214,0H44.643A44.648,44.648,0,0,0,0,44.643V98.214a44.648,44.648,0,0,0,44.643,44.643H98.214a44.648,44.648,0,0,0,44.643-44.643V44.643A44.648,44.648,0,0,0,98.214,0Zm31.25,98.214a31.284,31.284,0,0,1-31.25,31.25H44.643a31.284,31.284,0,0,1-31.25-31.25V44.643a31.284,31.284,0,0,1,31.25-31.25H98.214a31.284,31.284,0,0,1,31.25,31.25Z"/>
+        </g>
+      </g>
+      <g id="Group_1367" data-name="Group 1367" transform="translate(35.714 35.714)">
+        <g id="Group_1366" data-name="Group 1366">
+          <path id="Path_1261" data-name="Path 1261" class="cls-2" d="M163.714,128a35.714,35.714,0,1,0,35.714,35.714A35.716,35.716,0,0,0,163.714,128Zm0,58.036a22.321,22.321,0,1,1,22.321-22.321A22.353,22.353,0,0,1,163.714,186.036Z" transform="translate(-128 -128)"/>
+        </g>
+      </g>
+      <g id="Group_1369" data-name="Group 1369" transform="translate(105.062 28.277)">
+        <g id="Group_1368" data-name="Group 1368">
+          <circle id="Ellipse_20" data-name="Ellipse 20" class="cls-2" cx="4.759" cy="4.759" r="4.759"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,6438 @@
+/*
+Developer : Aman Sharma, Satyendra Singh Chouhan, Piyush Sahu
+File Name : App.css
+Purpose   : Global styling for components.
+*/
+
+@import "../node_modules/react-quill/dist/quill.snow.css";
+@import "../node_modules/react-quill/dist/quill.core.css";
+@import "../node_modules/react-quill/dist/quill.bubble.css";
+
+/* Radio button styling for poll section  */
+
+[type="radio"]:checked,
+		[type="radio"]:not(:checked) {
+		    position: absolute;
+		    left: -9999px;
+		}
+		[type="radio"]:checked + label,
+		[type="radio"]:not(:checked) + label
+		{
+		    position: relative;
+		    padding-left: 28px;
+		    cursor: pointer;
+		    line-height: 20px;
+		    display: inline-block;
+		    color: #666;
+		}
+		[type="radio"]:checked + label:before,
+		[type="radio"]:not(:checked) + label:before {
+		    content: '';
+		    position: absolute;
+		    left: 0;
+		    top: 0;
+		    width: 16px;
+		    height: 16px;
+		    border: 1px solid #E18F68;
+		    border-radius: 100%;
+		    background: #fff;
+		}
+		[type="radio"]:checked + label:after, [type="radio"]:not(:checked) + label:after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #E18F68;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      border-radius: 100%;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+  }
+		[type="radio"]:not(:checked) + label:after {
+		    opacity: 0;
+		    -webkit-transform: scale(0);
+		    transform: scale(0);
+		}
+		[type="radio"]:checked + label:after {
+		    opacity: 1;
+		    -webkit-transform: scale(1);
+		    transform: scale(1);
+    }
+
+body{
+  font-family: montserratregular;
+}
+
+.suggestBoxHeight
+{
+  left: 7%;
+  width: 85%;
+}
+
+.overflowY{
+	overflow-y: auto;
+}
+
+.paginationButtons{
+  background: #E18F68;
+  padding: 5px 20px;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.notFoundContainer{
+  height: 100vh;
+}
+
+.notFoundText{
+  font-size: 30px;
+  font-weight: 500;
+  color: #E18F68;
+}
+
+/* SVG icons css starts here */
+.icon-down_fill:before {
+  font-family: icomoon;
+  content: "\e900";
+  color: #FDD717;
+  font-size: 13px;
+}
+.icon-down_unfill:before {
+  font-family: icomoon;
+  content: "\e901";
+  color: #FDD717;
+  font-size: 13px;
+}
+.icon-up_fill:before {
+  font-family: icomoon;
+  content: "\e902";
+  color: #10AD3A;
+  font-size: 13px;
+}
+.icon-up_unfill:before {
+  font-family: icomoon;
+  content: "\e903";
+  color: #10AD3A;
+  font-size: 13px;
+}
+
+/* SVG icons css ends here */
+.headerImgs{
+  width: 26px;
+  height: 26px;
+}
+
+.cardImgCont{
+  width: 30px;
+  height: 30px;
+  min-height: 30px;
+  min-width: 30px;
+  overflow: hidden;
+}
+
+.maxWidth80{
+  max-width: 80%;
+}
+
+.width90{
+  width: 90%;
+}
+
+.fontWeight700{
+  font-weight: 700;
+}
+
+.minHeight55vh{
+  min-height: 75vh;
+}
+
+.boxShadowNone{
+  box-shadow: none !important;
+}
+
+.imageCandidatePartyProfile{
+  max-width: 100%;
+  width: 100px;
+  object-fit: cover;
+  background-position: top;
+}
+
+.wordBreakAll{
+  word-break: break-all;
+}
+
+.imageOpinion{
+  max-width: 100%;
+  width: 65px;
+  object-fit: cover;
+  background-position: top;
+}
+
+.opinionImageContainer{
+  width: 150px;
+  padding-top: 10px;
+}
+
+.dashboardCardContent{
+  width: 200px;
+  line-height: 14px;
+}
+
+.AppUserLogin.userElection.userDashboard
+{
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.UnderConstructionCont .row_height{
+  min-height: 85vh;
+}
+
+.partyIconCandidateBadge{
+  margin-top: -40px;
+  margin-left: 60px;
+}
+
+.partyIconCandidateBadgeUser{
+  margin-top: 55px;
+  margin-left: -30px;
+}
+
+.preWrapWhiteSpace{
+  white-space: pre-wrap;
+}
+
+.userContainer{
+ width: 85%;
+}
+
+.paddingLeft10{
+  padding-left: 10px;
+}
+
+.paddingRight10{
+  padding-right: 10px;
+}
+
+.lineHeight14{
+  line-height: 14px;
+}
+
+.lineHeight16{
+  line-height: 16px;
+}
+
+.lineHeight18{
+  line-height: 18px;
+}
+
+.margin-left-negative{
+  margin-left: -15px !important;
+}
+
+.margin-top-negative-3{
+  margin-top: -3px !important;
+}
+
+.margin-top-negative-5{
+  margin-top: -5px !important;
+}
+
+.primaryColorText{
+  color: #E18F68 !important;
+}
+
+.topCandidatesAndPartiesSection{
+  height: 320px;
+}
+
+.iconColor{
+  color: #EB7A59;
+}
+
+.iconBackground{
+  background-color: #E18F68;
+  height: 1em !important;
+  width: 1em !important;
+}
+
+.borderBottom{
+  border-bottom:1px solid grey;
+}
+
+.dropZoneBox{
+  min-height: 150px;
+  border: 2px dashed grey;
+}
+
+.user_name_truncate{
+  width: 100%;
+  height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 15px;
+}
+
+.circularLoading{
+  min-height: 90vh;
+}
+
+.loader{
+  position: absolute;
+  top: 15%;
+}
+
+.otpContainer{
+  height: 65%;
+}
+
+.otpContainer .formContainerLogin .formBoxLoginLogin{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inlineButtons{
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+}
+
+.radioOptions>span
+{
+  padding: 0px;
+  margin-left: 15px;
+}
+
+.height_auto>span:first-child{
+  height: auto;
+}
+
+.App {
+  text-align: center;
+}
+
+.redColor {
+  color: red;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.page_path{
+  font-size: 12px;
+  margin-left: 7%;
+  margin-top: 17px;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  }
+
+  .loaderSpinner {
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 5px solid #E18F68;
+    width: 20px;
+    height: 20px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+  }
+
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+/* <=====================================Login/SignUp design starts here==========================================> */
+
+.AppUserLogin{
+  flex-grow: 1;
+  width: 100%;
+  margin: auto;
+  z-index: 1;
+  text-align: center;
+  overflow: hidden;
+}
+
+.AppUserLogin .loginCont{
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+.loginCont .formContainerLogin{
+  margin-right: auto;
+  margin-left: auto;
+  height: 100%;
+ }
+
+ .loginCont .formContainerLogin .formBoxLoginLogin{
+  margin-right: auto;
+  margin-left: auto;
+  height: 100%;
+  padding-bottom: 20px;
+  min-height: 88vh;
+}
+
+.loginCont .formContainerLogin .formBoxLoginLogin .loginTextBox{
+  display: flex;
+  margin-top: 5%;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  width:60%;
+  height: 10%;
+}
+
+.inputWidth{
+  width: calc(80% - 24px);
+  height: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.inputWidth1{
+  width: calc(80% - 24px);
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2px;
+  padding-bottom: 15px;
+  padding-top: 35px;
+}
+
+.selectBox{
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-bottom: 2px;
+}
+.selectEdit{
+  height: 55px;
+  width: calc(80% - 24px);
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-bottom: 2px;
+}
+
+.addInfo{
+  width: 100%;
+  height: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.addInfo1{
+ width: 100%;
+  height: 60px;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+.loginCont .forgotPasswordBoxLogin{
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  width: 70%;
+  margin-bottom: 30px;
+}
+
+.ForgotTextStyleLogin{
+  font-size: 14px;
+  margin-bottom: 6%;
+  color: black;
+}
+
+.loginCont .orArea{
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  width:100%;
+  margin-bottom: 0px;
+  position: relative;
+  top: -30px;
+}
+
+.orLine{
+  border: 0.5px solid #ddd;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.orColor {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60px;
+  height: 60px;
+  border:10px solid #FEF8DF;
+  color: #cccccc;
+  border-radius: 50%;
+  background-color: #fff;
+  line-height: 3;
+}
+
+.loginCont .buttonsContainerLogin{
+  display: flex;
+  flex-direction: column;
+  margin-top: -10px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+  min-height: 100px;
+  margin-bottom: 4%;
+}
+
+.buttonsContainerLogin {
+  display: flex;
+  flex-direction: column;
+  margin-top: -15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+  min-height: 100px;
+}
+
+.loginCont .facebookAndGoogleContainerLogin{
+  margin-bottom: 2px;
+  height: 100%;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.loginCont .facebookColLogin{
+  height: 100%;
+}
+
+.loginCont .googleColLogin{
+  height: 100%;
+}
+
+.loginCont .marginFace{
+  margin-top: 40px;
+}
+
+.loginCont .borderIcon{
+  margin-left: 10px;
+}
+
+/* <=====================================Login/SignUp design ends here==========================================> */
+
+/* <=====================================candidate card design starts here==========================================> */
+
+.inputSearchParty.input{
+  width: 260px;
+}
+
+.candidateCardsParent{
+  flex-grow: 1;
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.candidateCardsParent.temp {
+  overflow-y: auto;
+}
+
+.candidateCardsParent .flex_card_design{
+  height: 100%;
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    padding: 10px 5px 10px 5px;
+    border-radius: 5px;
+    flex-direction: column;
+    align-items: center;
+    -webkit-transition: all .4s ease-in-out;
+     -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+     -o-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+}
+
+.candidateCardsParent .circlePartyIconCandidate{
+  height: 40px;
+  width: 40px;
+  margin-top: -35px;
+  margin-left: 15px;
+  position: absolute;
+}
+
+.circlePartyIconCandidateElectionDetail{
+  height: 40px;
+  width: 40px;
+  margin-top: -10px;
+  margin-left: -15px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.allCandidateContainer .noSpace{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.badgeIconElectionDetail{
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: 70px;
+  margin-top: -35px;
+}
+
+.candidateCardsParent .circle{
+  margin-top: 6%;
+  position: relative;
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+}
+
+.candidateCardsParent .homeArea{
+  background-color: #F4F2F0;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding-left: 6%;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.homeArea{
+  background-color: #F4F2F0;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding-left: 6%;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.candidateCardsParent .candidateCards{
+  padding-right:5px;
+  padding-left:5px;
+  min-height: 43%;
+  height: auto;
+  margin-bottom: 10px;
+  word-break: break-word;
+}
+
+.candidateCardsParent .rowCandidate{
+  margin-right: 0px;
+  margin-left: 0px;
+  height: 100%;
+  width: 98%;
+}
+.Circular{
+  bottom: auto;
+  z-index: 999999;
+}
+
+.candidateCardsParent .candidateGridContainer{
+  width: 92%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.candidateCardsParent .filterIcon{
+  margin-top: -10px;
+  padding: 5px 8px 5px 8px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.userElection .filterIcon{
+  margin-top: -10px;
+  padding: 5px 8px 5px 8px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.winnerText{
+  top: 5px;
+    border-radius: 10px;
+    right: 10px;
+    padding: 3px 6px 2px 6px;
+}
+
+.candidateCardsParent .headingPage{
+  white-space: nowrap;
+}
+
+.candidateCardsParent .headingForSearch
+{
+  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.maxBoxHeight{
+  height: 85px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.maxBoxHeightParty{
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* <=====================================candidate cardd design ends here==========================================> */
+
+/* <=====================================Party cards design starts here==========================================> */
+
+.partyCardsParent{
+  flex-grow: 1;
+  height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+  margin: auto;
+  text-align: center;
+}
+
+.partyCardsParent .headingPage{
+  white-space: nowrap;
+}
+
+.partyCardsParent .flex_card_design{
+  height: 100%;
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    padding: 10px 5px 10px 5px;
+    border-radius: 5px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circlePartyIconCandidate{
+  border-radius: 50%;
+  width: 100%;
+  margin-top: -35px;
+  margin-left: 15px;
+  position: absolute;
+}
+
+.candidateCardsParent .circle{
+  margin-top: 6%;
+  position: relative;
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+}
+
+.partyCardsParent .homeArea{
+  background-color: #F4F2F0;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding-left: 6%;
+}
+
+.partyCardsParent .candidateCards{
+  padding-right:5px;
+  padding-left:5px;
+  min-height: 43%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.partyCardsParent .rowCandidate{
+  margin-right: 0;
+  margin-left: 0;
+  height: 100%;
+  width: 98%;
+}
+
+.partyCardsParent .candidateGridContainer{
+  height: 75%;
+  width: 92%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.AdminPoliticalPartyContainer{
+  width: 90%;
+}
+
+.partyCardsParent .filterIcon{
+  margin-top: -10px;
+    padding: 5px 8px 5px 8px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+/* <=====================================party cards design ends here==========================================> */
+
+/* <=====================================user election page design starts here==========================================> */
+
+.imageUploadElectionDetail{
+  height: 55px;
+  width: 55px;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.userElection{
+  flex-grow: 1;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.userElection .homeArea{
+  background-color: #F4F2F0;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 30px;
+  padding-left: 6%;
+}
+
+.userElection .rowCandidate{
+  margin-right: 0;
+  margin-left: 0;
+  height: 100%;
+  width: 98%;
+}
+
+.userElection .electionGridContainer{
+    min-height:78vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+
+  }
+
+  .breadCrumbs {
+    color: #555555;
+  }
+
+  .breadCrumbs:hover{
+    color:#555555;
+  }
+
+  .breadCrumbs a:hover {
+    color:#555555;
+  }
+
+  .userElection .tableElectionDiv
+  { display:flex;
+    justify-content: center;
+    overflow-x: auto;
+    box-shadow: rgb(107, 106, 106) 0px 1px 6px 0px;
+  }
+
+/* <=====================================user election page design ends here==========================================> */
+
+/* <=================================================User Home Page starts here====================================================> */
+
+.searchBoxParent{
+  width: 95%;
+}
+
+.stateBox{
+  height: 150px;
+  width: 150px;
+  overflow-y: auto;
+  left: 174px;
+  top: 0px;
+  box-shadow: 0 0 3px gray;
+  background-color: #FEF8DF;
+}
+
+.searchBoxParent div div::before{
+  border-bottom: 0px solid rgba(0,0,0,0) !important;
+}
+
+input:before{
+  display: none;
+}
+
+.searchHome
+{
+  border-radius: 50%;
+  padding: 12px;
+  color: #fff;
+  margin-right: -8px;
+  margin-top: 1px;
+}
+
+.closeIcon{
+  position: absolute;
+  font-size: 15px;
+  border-radius: 50%;
+  background: #ccc;
+  padding: 4px;
+  color: white;
+  width: 25px;
+  height: 25px;
+  right: 13px;
+  z-index: 1;
+  top: 7px;
+}
+
+.searchAppBar{
+  position: absolute;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  right: 40px;
+  color: #fff;
+  font-size: 15px;
+  z-index: 1;
+  top: 7px;
+}
+
+.searchAppBarResponsive{
+  position: absolute;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  top: 7px;
+  right: 10px;
+  color: #fff;
+  font-size: 15px;
+  z-index: 1;
+}
+
+.globalSearchHideFunc.globalSearchHide
+{
+  display: none !important;
+}
+
+.searchButton{
+  margin-top: -43px;
+  margin-right: 10px;
+}
+
+.commetTextArea{
+  overflow-y: auto;
+  word-break: break-all;
+  height: 200px;
+  width: 100%;
+}
+
+.cardRadius{
+  border: 1px solid #ddd;
+}
+
+.topContainerUserTop{
+  margin-right: auto;
+  margin-left: auto;
+  min-height: 65%;
+  width: 100%;
+  padding-top: 60px;
+  background-image: url('images/hero-image.png');
+  background-size:cover;
+}
+
+.topContainerUserTop .UserhomeWelcomTextRow{
+  display: flex;
+  flex-direction: column;
+  margin-right: 0;
+  margin-left: 0;
+  height: 100px;
+  width: 100%;
+}
+
+.topContainerUserTop .UserhomeWelcomTextRow .UserhomeWelcomTextCol{
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 4%;
+  margin-bottom: 2%;
+  min-height: 100px;
+}
+
+.topContainerUserTop .SearchBoxColUserHome{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 2%;
+  min-height: 180px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.checkMajorityMargin{
+  margin-bottom: 85px;
+    margin-top: 50px;
+}
+
+.browseElectionMargin{
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+ .fourItemTopContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  min-height: 10%;
+  height: auto;
+  width: 100%;
+}
+
+.fourItemTopContainer .fourItemContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  min-height: 10%;
+  height: auto;
+  width: 90%;
+}
+
+.fourItemTopContainer .borderRadiusCard{
+  border-radius: 0;
+  border: none;
+  position: relative;
+  height: auto;
+  bottom: 55px;
+}
+
+.fourItemTopContainer .borderRadiusCard.card{
+  border: none;
+}
+
+.fourItemTopContainer .exploreCandidateCol{
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  justify-content: center;
+  height: 180px;
+  padding-left: 0;
+}
+
+.fourItemTopContainer .upvotedCandidateCol{
+  padding-left: 0;
+  padding-right: 4px;
+  height: auto;
+}
+
+.fourItemTopContainer .iconSpace{
+  margin-right: 4px;
+  margin-left: auto;
+}
+
+.fourItemTopContainer .iconSpaceIcon{
+    margin-right: 3px;
+}
+
+.fourItemTopContainer .spaceTextUserHome{
+  margin-right: 8%;
+}
+
+.fourItemTopContainer .cardHeaderUser{
+  border-radius: none;
+  border-bottom: 0;
+  text-align: left;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fourItemTopContainer .mediaShadow{
+  box-shadow: none;
+}
+
+.fourItemTopContainer .mediaCenter{
+  box-shadow: none;
+  padding: 10px;
+  height: 50px;
+}
+
+.fourItemTopContainer .upvotedPartiesCol{
+  padding-left: 4px;
+  padding-right: 0;
+  height: auto;
+}
+
+.fourItemTopContainer .cardContent{
+    min-height: 10px;
+    width: auto;
+    padding-left: 10px;
+    text-align: left;
+    overflow-x: hidden;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.fourItemTopContainer .cardContent .topPartiesList
+{
+  width: 100%;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.fourItemTopContainer .cardContent .topPartiesList .topList
+{
+  width: 100%;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.fourItemTopContainer .explorePartiesCol{
+  display: flex;
+  text-align: right;
+  flex-direction: column;
+  justify-content: center;
+  height: 180px;
+  padding-right: 0;
+}
+
+.lastFourItemsContainer{
+  height: auto;
+  min-height: 15%;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -20px;
+}
+
+.lastFourItemsContainer .lastFourItems{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 25px;
+}
+
+.lastFourItemsContainer .innerContainerUserHome{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   vertical-align: middle;
+   min-height: 100%;
+   height: 70px;
+   width: 100%;
+}
+
+.lastFourItemsContainer .lastFourCol1{
+  height: 70px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.lastFourItemsContainer .hoverEffect{
+  text-align: center;
+}
+
+.lastFourItemsContainer .hoverEffect:hover{
+  color: #E18F68;
+}
+
+/* <=================================================User Home Page ends here====================================================> */
+
+/* ====================================================user info section============================================ */
+
+.userNameHeader{
+  white-space: nowrap;
+}
+
+.userInfoCont {
+  min-height: 87vh;
+}
+
+.AppUserLogin .userInfoButton{
+  height: 50px;
+  font-size: 16;
+  width: calc(80% - 24px);
+  margin: 0;
+  background-color: #E18F68;
+  border: 0px;
+}
+
+/* Clear padding from right for calendar icon */
+
+.dateInput{
+  padding-top: 12px;
+  padding-right: 5px;
+  border-radius: 0px;
+}
+
+.dateInput.placeholderclass::before{
+  content: attr(placeholder);
+}
+
+.dateInput::placeholder{
+  content:  attr(placeholder);
+}
+
+.dateInput.placeholderclass:hover::before{
+  content:''
+}
+
+.dateBorder{
+  border: 1px solid #CED4DA;
+}
+
+.dateInput::-webkit-inner-spin-button,
+.dateInput::-webkit-clear-button {
+  display: none;
+  -webkit-appearance: none;
+}
+
+.calendarIcon{
+  right: 19px;
+}
+
+.dateInput::-webkit-calendar-picker-indicator{
+  background-image: url(images/calendar.png);
+  background-position:center;
+  background-size: 20px auto;
+  width: 25px;
+  height: 25px;
+  z-index: 9999;
+  background-repeat:no-repeat;
+  color:rgba(204,204,204,0);
+}
+
+.dateInput::-webkit-calendar-picker-indicator.hover{
+  background-color: none;
+}
+
+.AppUserLogin .userInfoGender{
+  width: 70%;
+  white-space: nowrap;
+}
+
+.textAlignJustify
+{
+  text-align: justify;
+}
+
+/* ====================================================user info section============================================ */
+
+/* <---------------footer-styles------------start-------------> */
+
+.footerContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  bottom: 0;
+  min-height: 100px;
+  height: auto;
+  width: 100%;
+}
+
+.footerIconImg
+{
+  height: 35px;
+  width: 35px;
+  margin-right: 5px;
+}
+
+.innerFooter{
+  display: flex;
+  align-items: center;
+  min-height: 78px;
+  width: 100%;
+  position: fixed;
+  bottom: 26px;
+  margin-left: 0px;
+  background-color: #555555;
+}
+
+.iconfooterHome.icons
+{
+    padding: 8px 10px 8px 10px;
+    background: #fff;
+    margin-right: 7px;
+    font-size: 22px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.iconfooterHomefb.icons
+{
+    padding: 8px 13px 8px 13px;
+    background: #fff;
+    margin-right: 7px;
+    font-size: 22px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.logoTextCol{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  display: flex;
+}
+
+
+.logoImage{
+  height: 45px;
+  width: 45px;
+}
+
+.TextRow{
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 90%;
+  justify-content: center;
+}
+.TextCol{
+  min-height: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.aboutUsCol{
+  height: auto;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerTxtContLogin{
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 80%;
+  text-align: left;
+  display: flex;
+  width: 90%;
+  flex-direction: column
+}
+
+.footerSmallText{
+  font-size: 12px;
+  font-family: montserratregular;
+}
+
+.footerSmallTextTop{
+  font-size: 14px;
+  color: white;
+  font-family: montserratsemibold;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.twoIconRow{
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.lastTwoButton{
+  height: auto;
+}
+
+.lastTwoButtonOne{
+  height: auto;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.marginButton{
+  margin-left: 2%;
+}
+
+.twoIconCol{
+  justify-content: center;
+  height: 100%;
+}
+
+.appleStoreContainer{
+  height: 64px;
+  width: 202px;
+}
+
+.appleStore{
+  height: 100%;
+  width: 100%;
+}
+
+.googleStoreContainer{
+  height: 64px;
+  width: 202px;
+}
+
+.lastFooterContent{
+  height: 26px;
+  width: 100%;
+}
+
+.lastRow{
+  width: 100%;
+  margin-left: -15;
+  margin-right: 0;
+  background-color: #515151;
+  position: fixed;
+  bottom: 0;
+}
+
+.lastCol{
+  line-height: 25px;
+}
+
+.lastText{
+  color: white;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* <---------------------footer-styles--------end-------------> */
+/* =========================================candidate profile container ===============================================*/
+
+.fa-facebook{
+  color: #4267B2;
+}
+
+.fa-twitter{
+  color: #1DA1F2;
+}
+
+.assetFixedSize
+{
+  overflow-x: hidden;
+}
+
+.iconDown{
+  font-size: 25px;
+}
+
+.assetValueSize
+  {
+    width: 100%;
+  }
+
+.assetWidth
+{
+  width: 20%;
+}
+
+.candidateProfileContainer
+{
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+.profileCont{
+  padding-bottom: 4.9rem;
+  height: 90vh;
+}
+
+.formBoxeditUserProfile
+{
+  height: auto;
+}
+
+.userProfileContainer .row_height{
+  min-height: 70vh;
+}
+
+.candidateProfileContainer .row_height{
+  min-height: 90vh;
+}
+
+.candidateProfileContainer .tableCandidate
+{
+  overflow: auto;
+}
+
+.candidateProfileContainer .likeDislikeBar{
+  height: 18px;
+  line-height: 18px;
+  color: white;
+  font-size: 14px;
+  margin-top: -6px;
+}
+
+.candidateProfileContainer .contentContainer
+{
+  float: right;
+  width: calc(100% - 230px);
+}
+
+.candidateProfileContainer .flexCardProfile{
+  width: 215px;
+  float: left;
+  position: fixed;
+}
+
+.likeDislikeBarContainer
+{
+  margin-top: -12px;
+}
+
+.likeDislikeIcons{
+  width: 15px;
+  height: 15px;
+}
+
+.likeDislikeBarContainer .follow{
+  margin-top: -23px;
+  width: 100%;
+  padding-right: 6px;
+}
+
+.candidateProfileContainer .postCommentLike{
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.candidateProfileContainer .commentShow{
+  border-right: 1px solid lightgray;
+  min-height: 65vh;
+}
+
+.profileBorder{
+  border-right: 1px solid lightgray;
+}
+
+.newsBox{
+  height: 600px;
+  overflow-y: scroll;
+}
+
+.candidateProfileContainer .electionDetailContainer{
+  border: 1px solid grey;
+}
+
+.candidateProfileContainer .commentSection{
+  border: 1px solid black;
+  width: calc(100% - 160px);
+}
+
+.candidateProfileContainer .commentSection .commentTextEdit
+{
+  height: 80px;
+  border: none;
+}
+
+.candidateProfileContainer .form-control:focus
+{
+  box-shadow: 0 0 0 0;
+}
+
+.candidateProfileContainer .commentReview{
+  box-shadow: rgb(107, 106, 106) 0px 1px 6px 0px;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+  background-color: #fff;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #fff;
+}
+
+.table tbody tr:hover
+{
+  background-color : #FEF8DF;
+}
+
+.candidateProfileContainer .chargedFramesCont{
+  min-height: 300px;
+}
+
+/* =========================================Party Profile Container========================================= */
+
+.partyProfileSection
+{
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+.partyProfileSection .row_height
+{
+  min-height:90vh;
+}
+
+.row_height_dashboard
+{
+  min-height:50vh;
+}
+
+.partyProfileSection .likeDislikeBar{
+  height: 18px;
+  line-height: 18px;
+  color: white;
+  font-size: 14px;
+  margin-top: -6px;
+}
+
+.partyProfileSection .contentContainer
+{
+    float: right;
+    width: calc(100% - 230px);
+}
+
+.partyProfileSection .flexCardProfile{
+  width: 215px;
+  float: left;
+  position: fixed;
+  box-shadow: rgb(107, 106, 106) 0px 1px 6px 0px;
+}
+
+.partyProfileSection .likeDislikeBar .like{
+  width: 33%;
+}
+
+.partyProfileSection .likeDislikeBar .dislike{
+  width: 33%;
+}
+
+.partyProfileSection .likeDislikeBar .cantSay{
+  width: 33%;
+}
+
+.partyProfileSection .likeDislikeBarContainer
+{
+  margin-top: -12px;
+}
+
+.partyProfileSection .likeDislikeBarContainer .follow{
+  margin-top: -18px;
+  width: 100%;
+  padding-right: 6px;
+}
+
+.partyProfileSection .postCommentLike{
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.partyProfileSection .commentShow{
+  border-right: 1px solid lightgray;
+}
+
+.partyProfileSection .electionDetailContainer{
+  border: 1px solid grey;
+}
+
+.partyProfileSection .commentSection{
+  border: 1px solid black;
+  width: calc(100% - 160px);
+}
+
+.partyProfileSection .remove{
+  padding: 1px 5px;
+}
+
+.partyProfileSection .remove:hover{
+  background:#E18F68;
+  padding: 1px 5px;
+  border-radius: 2px;
+  color: #fff;
+}
+
+ .remove1:hover{
+  padding: 1px 5px;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.remove1 {
+  padding: 1px 5px;
+}
+
+.partyProfileSection .commentSection .commentTextEdit
+{
+  height: 80px;
+  border: none;
+}
+
+.partyProfileSection .form-control:focus
+{
+  box-shadow: 0 0 0 0;
+}
+
+.partyProfileSection .commentReview{
+  box-shadow: rgb(107, 106, 106) 0px 1px 6px 0px;
+}
+
+.partyProfileSection .chargedFramesCont{
+  min-height: 300px;
+}
+
+/* ===========================User Constituency page Styling============================= */
+
+.constituencyContainer{
+  width: 90%;
+  margin-bottom: 30px;
+  min-height: 80vh;
+}
+
+.constituencyContainer .filterCandidateContainer{
+    width: 300px;
+    float: left;
+    position: relative;
+}
+
+.constituencyContainer .filterCandidateContainerHideShow {
+    width: 275px;
+    background-color: #fff;
+    visibility: visible;
+    position: absolute;
+    z-index: 1;
+}
+
+.constituencyContainer .filterCandidate{
+  position: fixed;
+  min-height: 70vh;
+  background: #fff;
+  width: 300px;
+  box-shadow: rgb(107, 106, 106) 0px 1px 6px 0px;
+}
+
+.constituencyContainer .allCandidateContainer{
+        top: 0;
+        padding-top: 0;
+        width: calc(100% - 325px);
+        float: right;
+}
+
+.constituencyContainer .caretRightIcon{
+  position: absolute;
+  right: 15px;
+}
+
+.constituencyNameDetail
+{
+  white-space: nowrap;
+  width: 275px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.constituencyContainer .partyIcon{
+  width: 70px;
+  height: 70px;
+}
+
+.constituencyContainer .noCandidates{
+  background-color: #EB6D4A;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  color: white;
+}
+
+.constituencyContainer .partyIconContainer{
+  box-shadow: rgb(107, 106, 106) 0px 1px 6px 0px;
+}
+
+.constituencyContainer .constituencyCandidateContainer .row{
+  margin: 0px;
+}
+
+.constituencyContainer .flex_card_design{
+  height: 100%;
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    padding: 10px 5px 10px 5px;
+    border-radius: 5px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgb(107, 106, 106) 0px 1px 6px 0px;
+}
+
+.constituencyContainer .candidateCards{
+  padding-right:5px;
+  padding-left:5px;
+  min-height: 43%;
+  height: auto;
+  margin-bottom: 10px;
+  max-width: 220px;
+}
+
+.constituencyContainer .badgeIcon{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 70px;
+    margin-top: -35px;
+}
+
+.constituencyContainer .searchInput
+{
+  height: 45px;
+}
+
+.constituencyContainer .tab{
+  height: 150px;
+  overflow: hidden;
+}
+
+.showHide
+{
+  display: none;
+}
+
+button:focus{
+  outline: 0px auto -webkit-focus-ring-color;
+}
+
+/* =============================Admin Political add Party Styling================================ */
+
+/* General Info */
+
+.generalInfo .radioInputCheckbox{
+  min-height: 50px;
+  width: 70%;
+}
+
+.generalInfo .twoInputRow{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.generalInfo .firstInputGeneralOne{
+  height: 40px;
+}
+
+.generalInfo .firstInputGeneralOne .react-datepicker-wrapper{
+  width: 100%;
+  height: 100%
+}
+
+.generalInfo .firstInputGeneralOne .react-datepicker__input-container{
+  height: 100%;
+  width: 100%
+}
+
+.generalInfo .firstInputContactGen{
+  height: 40px;
+  margin-bottom: 0%;
+}
+
+.generalInfo .dateInput{
+  height: 100%;
+  width: 100%;
+  border: 1px solid #CFD2D5;
+  color: #6C6B68;
+  padding: .375rem .75rem;
+}
+
+.generalInfo .redDateInput {
+  height: 100%;
+  width: 100%;
+
+  border: 1px solid red;
+  color: #6C6B68;
+  padding: .375rem .75rem;
+}
+
+.generalInfo .firstInputContGen{
+  height: 40px;
+  display: flex;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.generalInfo .firstInputVal{
+  height: 15px;
+  margin-bottom: 0;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.generalInfo .validationCont{
+  height: auto;
+  display: flex;
+  color: red;
+  font-family: montserratregular;
+  font-size: 14px;
+  padding-left: 5px;
+
+}
+
+.generalInfo .firstInputTwo{
+  height: 40px;
+  margin-bottom: 0%;
+}
+
+.generalInfo .twoInputRowGen{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.generalInfo .firstInputGen{
+ height: 40px;
+}
+
+.generalInfo .newMargin{
+  margin-top: 10px;
+}
+
+.generalInfo .inputColAddVal{
+  height: 30px;
+}
+
+.generalInfo .firstInputContP{
+  height: 40px;
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.generalInfo .firstInputContactP{
+  height: 40px;
+  margin-bottom: 0;
+}
+
+.generalInfo input[required] + label:after {
+  content:'*';
+  color: red;
+}
+
+/* Table css */
+.widthTable10
+{
+  width: 10%;
+}
+
+.widthTable20
+{
+  width: 20%;
+}
+
+.widthTable40
+{
+  width: 40%;
+}
+
+.widthTable30
+{
+  width: 30%;
+}
+
+.widthTable60
+{
+  width: 60%;
+}
+
+/* purpose party */
+
+.purposeCont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;;
+  width: 100%;
+}
+
+.purposeCont .ql-editor{
+height: 263px;
+font-family: montserratregular;
+}
+
+.purposeCont .ql-formats{
+color: #555555;
+}
+
+.purposeCont .ql-picker{
+color: #555555;
+}
+
+.purposeCont .quillPurpose {
+margin-top: 5%;
+}
+
+.purposeCont .quillRowPurpose{
+min-height: 100px;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.purposeCont .quillColPurpose{
+height: auto;
+margin-bottom: 4%;
+margin-top: 3%;
+}
+
+.purposeCont .firstInputPurpose{
+  margin-left: 0;
+  height: 15px;
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.purposeCont .validationContPurp{
+height: auto;
+width: 100%;
+display: flex;
+color: red;
+font-family: montserratregular;
+font-size: 14px;
+padding-left: 5px;
+}
+
+.validationCont{
+  height: auto;
+  display: flex;
+  color: red;
+  font-family: montserratregular;
+  font-size: 13px;
+  padding-left: 1px;
+  padding-top: 2px;
+}
+
+/* contact detail */
+
+.ContactDetailsContParty{
+  min-height: 500px;
+  width: 100%;
+}
+
+.ContactDetailsContParty .contactPartyTabs{
+  margin-top: auto;
+  margin-bottom: auto;
+  min-height: 350px;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.ContactDetailsContParty .contactPartyRow{
+  display: flex;
+  justify-content: center;
+  min-height: 350px;
+  margin-left: 0;
+  margin-right: 0;
+  width: inherit;
+}
+
+.ContactDetailsContParty .officeContainer{
+  height: auto;
+  width: 100%;
+  margin-top: 4%;
+}
+
+.ContactDetailsContParty .firstInputContact{
+  height: 40px;
+  margin-bottom: 2%;
+}
+
+.ContactDetailsContParty .twoButtonRowParty{
+  min-height: 60px;
+  height: auto;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ContactDetailsContParty .firstInputContSelect{
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.ContactDetailsContParty .firstInputContactOffice{
+  height: 40px;
+  margin-bottom: 6%;
+}
+
+.ContactDetailsContParty .firstInputContactOfficeOne{
+  height: 40px;
+}
+
+.ContactDetailsContParty .validationContOffice {
+  height: auto;
+  display: flex;
+  color: red;
+  font-family: montserratregular;
+  font-size: 13px;
+  padding-left: 5px;
+}
+
+/* Admin dashboard styling */
+
+.adminDashboard .viewAll{
+  border-radius: 40px;
+  cursor: pointer;
+  color: #E18F68;
+}
+
+.adminDashboard .headHeight{
+  height: 40px;
+}
+
+/* Common Icon Styling */
+
+.noHover:hover{
+  background: none !important;
+}
+
+.icon_styling .icon
+{
+  background: none;
+  border: 1px solid transparent;
+  padding: 4px 5px;
+  font-size: 35px;
+  border-radius: 5px;
+  border: 1px solid grey;
+   -webkit-transition: opacity .15s cubic-bezier(0.4,0.0,0.2,1);
+    transition: opacity .15s cubic-bezier(0.4,0.0,0.2,1);
+}
+
+.icon_styling .icon:hover
+{
+  background-color: #eb6d4a8a;
+  border: 1px solid #ddd;
+  color: #444;
+}
+
+.icon_styling .iconPlus
+{
+  background: none;
+  border: 1px solid transparent;
+  padding: 4px 5px;
+  font-size: 20px;
+  border-radius: 50%;
+   -webkit-transition: opacity .15s cubic-bezier(0.4,0.0,0.2,1);
+    transition: opacity .15s cubic-bezier(0.4,0.0,0.2,1);
+}
+
+.icon_styling .iconPlus:hover
+{
+  background-color: #eb6d4a8a;
+  border: 1px solid #ddd;
+  color: #444;
+}
+
+
+/* Admin constituency page design */
+
+.adminConstituencyPage .icon_styling .icon
+{
+  background: none;
+  border: 1px solid transparent;
+  padding: 4px 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid grey;
+   -webkit-transition: opacity .15s cubic-bezier(0.4,0.0,0.2,1);
+    transition: opacity .15s cubic-bezier(0.4,0.0,0.2,1);
+}
+
+.adminConstituencyPage .icon_styling .icon:hover
+{
+  background-color: #eb6d4a8a;
+  border: 1px solid #ddd;
+  color: #444;
+}
+
+.adminConstituencyPage .actions{
+  margin-top: -10px;
+  margin-bottom: -8px;
+}
+
+.adminConstituencyPage .constituencyTable{
+  overflow-x: auto;
+}
+
+.buttonContainer{
+  margin-top: -5px;
+}
+
+.headingParties{
+  width: 200px;
+}
+
+/* candidate basic detail styling */
+
+.basicDetailCont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;;
+  width: 100%;
+}
+
+.education .crossIcon{
+    right: -8px;
+    z-index: 1;
+    color: #fff;
+    padding: 2px 4px 3px 4px;
+    border-radius: 50%;
+    background-color: black;
+    top: -10px;
+    cursor: pointer;
+}
+.criminal .crossIcon{
+  right: -8px;
+  z-index: 1;
+  color: #fff;
+  padding: 2px 4px 3px 4px;
+  border-radius: 50%;
+  background-color: black;
+  top: -10px;
+  cursor: pointer;
+}
+
+.circleBasic{
+ height: 40%;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.circleImageBasic{
+  height: inherit;
+  width: inherit;
+}
+
+.button {
+  position: relative;
+  border: none;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.positionBasic{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:absolute;
+  margin-left: 35px;
+  margin-top: 35px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px grey;
+}
+
+.firstInputCont{
+  height: 40px;
+  display: flex;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.inputColAdd{
+  height: 50px;
+}
+
+.firstInput{
+  height: 40px;
+}
+
+.firstInputContSelect{
+  height: 40px;
+  display: flex;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.firstInputContSelect.react-datepicker-wrapper{
+  width: 100%;
+}
+
+.firstInputContSelect.react-datepicker-wrapper.react-datepicker__input-contianer{
+  width: 100%;
+}
+
+.firstInputCheckbox{
+  height: 40px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.datePicker{
+  width: 80%;
+  border-color: grey;
+  color: grey;
+}
+
+.innerDate{
+  width: 100%;
+}
+
+.dateInput{
+  width: 100%;
+  outline: none;
+}
+
+.sizeSelect{
+  width: 100%;
+  border-color: lightgrey;
+}
+
+.twoButtonRow{
+  min-height: 60px;
+  height: auto;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonOneBasicCol{
+  height: auto;
+  display: flex;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  justify-content: flex-end;
+}
+
+.buttonBasicCol{
+  height: auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  display: flex;
+}
+
+/* candidate general Info Styling */
+
+.generalCont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;;
+  width: 100%;
+}
+
+.generalCont .ql-editor{
+  height: 163px;
+  font-family: montserratregular;
+}
+
+.generalCont .ql-formats{
+  color: #555555
+}
+
+.quill {
+  margin-top: 5%;
+}
+
+.quillRow{
+  min-height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quillCol{
+  height: auto;
+}
+
+.addPostContainer .previewContainer{
+  height: auto;
+  overflow-y: auto;
+  max-height: 660px;
+  min-height: 100px;
+  position: absolute;
+  top: 40px;
+}
+
+.quillContAddPost .ql-container{
+  height: 400px;
+  overflow-y: auto;
+}
+
+.quillContAddPost .ql-container .ql-tooltip{
+  left: 0 !important;
+}
+
+.quillContAddPost .ql-snow.ql-toolbar {
+  display: block;
+  background: #E18F68;
+}
+
+.quillContAddElection .ql-container{
+  height: 100px;
+  overflow-y: auto;
+}
+
+.quillContAddElection .ql-snow.ql-toolbar {
+  display: block;
+  background: #E18F68;
+}
+
+.previewHeader{
+  height: 40px;
+}
+
+.postContainer{
+  width: 90%;
+}
+
+.typeIndicatorSuggestion{
+  position: absolute;
+  right: 15px;
+  font-size: 12px;
+  color: #6c757d;
+}
+
+.chipsInputContainer{
+  border: 1px solid #ddd;
+  min-height: 80px;
+}
+
+.chipsContainer{
+  display: flex;
+  align-self: flex-start;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+.NewchipsContainer{
+  display: flex;
+  border-radius: 3px;
+  padding: 0 !important;
+  margin-left: auto;
+  margin-right:auto;
+  text-align: left;
+  margin-top: 10px;
+  word-break: break-all;
+  flex-wrap: wrap;
+  padding: 5px;
+  width: 350px;
+  height: 130px;
+  box-shadow: 0 0 3px grey;
+}
+
+.chipBox{
+  margin-top: 30px;
+  padding: 4px;
+  height: 100px;
+  overflow-y: auto;
+}
+
+.selfPRow{
+  min-height: 50px;
+  display: flex;
+  margin-top: 2%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.selfPCol{
+  min-height: 50px;
+}
+
+.selfPInput{
+  height: 50px
+}
+
+/* Coming Soon Page design */
+
+.comingSoonPage{
+  height: 100vh;
+}
+
+.ComingSoonContainer {
+  background-image: url(../src/images/cominSoonBackground.png);
+}
+
+.ComingSoonContainer .comingSoonText{
+    font-size: 38px;
+    font-weight: 500;
+    color: #E18F68;
+    height: 50vh;
+}
+
+/* candidate assets liabilities design */
+
+.assetLiabilitiesIcons .iconsCross{
+  top: -15px;
+  right: 25px;
+    border-radius: 50%;
+    color: #fff;
+    padding: 5px;
+    background-color: #282c34
+}
+
+.assetLiabilitiesIcons .iconCrossValue{
+  right: -7px;
+  top: -10px;
+  background: black;
+  border-radius: 50%;
+  padding: 3px 5px 4px 5px;
+  color: white;
+}
+
+.assetLiabilitiesIcons .iconsPlus{
+  top: -15px;
+  right: -8px;
+  border-radius: 50%;
+  color: white;
+  padding: 5px;
+  background-color: #282c34
+}
+
+/* Add candidate admin stylining starts here */
+
+.addCandidate .iconCalender
+{
+  right: 15px;
+  top: 10px;
+  color: #444;
+  font-size: 20px;
+}
+
+.datePickerCandidate .react-datepicker-wrapper
+{
+  width: 100%;
+}
+
+.datePickerCandidate .react-datepicker__input-container{
+  width: 100%;
+}
+
+.datePickerCandidate .dateInput{
+  width: 100%;
+  height: 40px;
+}
+
+.assetSelect select, option{
+  width: 100%;
+}
+
+.assetSelect div{
+  width: 100%;
+  background-color: transparent;
+  border: 0px;
+}
+
+.assetSelect{
+  background-color: #fff;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.assetSelect>div>div>div>div:focus{
+  background:transparent;
+}
+
+.assetSelect>div>div>div>{
+  background:transparent;
+  padding-right: 30px;
+}
+
+option {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.fa-info-circle{
+  font-size: 13px;
+  margin-right: 5px;
+}
+
+.imageUpload{
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-clip: padding-box;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.imageUploadOpinion{
+  height: 65px;
+  width: 65px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-clip: padding-box;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.imgUploadFunc{
+  display: none;
+}
+
+.appbarAdmin{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.marginHomeAdmin{
+  font-size: 12px;
+  margin-left: 5%;
+  margin-top: 1%;
+  margin-bottom: 5%;
+}
+
+.addCandidateContainer{
+  display: flex;
+  justify-content: center;
+  min-height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabRowAdmin{
+  display: flex;
+  justify-content: center;
+  min-height: inherit;
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+.tabColAdmin{
+  min-height: 400px;
+}
+
+.tabContainerAdmin{
+  border-radius: 0;
+  box-shadow: none;
+  margin-top: 25px;
+  min-height: 95%;
+  width: 100%;
+}
+
+.headerAdminAdd{
+  text-align: left;
+  border-radius: none;
+}
+
+.tabContainerCard{
+  min-height: 80%;
+  width: 100%;
+  padding: 0;
+  background-color: #FEF8DF;
+}
+
+/*
+Add party admin styling starts here */
+
+.AddParty {
+  margin-left: 6%;
+}
+
+.topHomeTextContainerAddP{
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+  background-color: #F4F2F0;
+}
+
+/* candidate page styling starts here */
+
+.homePageContainerAdmin{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  overflow-x:hidden;
+}
+
+.publicOpinionBox{
+  height: 350px;
+  overflow-y: auto;
+}
+
+.publicOpinionComment{
+  min-height: 100px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.recentPostBox{
+  height: 550px;
+  overflow-y: auto;
+}
+
+.topHomeTextContainerAdmin{
+  height: 4%;
+  width: 100%;
+  background-color: #F4F2F0;
+}
+
+.areaTopAdmin{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.homeAreaAdmin{
+  background-color: #F4F2F0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.marginHomeAdmin{
+  font-size: 12px;
+  margin-left: 7%;
+  margin-top: 1%;
+}
+
+.dashboardContainerAdmin{
+  height: auto;
+  width: 93%;
+  display: flex;
+  margin-top: 1%;
+  margin-bottom: 2.5%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboardTextContainerAdmin{
+  height: auto;
+  width: 30%;
+}
+
+.buttonsContainerCandidateAdmin{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: auto;
+  width: 40%;
+}
+
+.scrollBox{
+  min-height: 300px;
+  height: 600px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
+
+.commentLikeDislikeBox{
+  height: 35px;
+}
+
+.commentLikeDislikeBox div.form-inline{
+  height: 30px;
+}
+
+.likeImage{
+  height: 15px;
+  width: 15px;
+}
+
+.dislikeImage{
+  height: 16px;
+  width: 16px;
+}
+
+.deleteImage{
+  width: 18px;
+  height: 18px;
+}
+
+.likesCount{
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.dashboardTextStyleAdmin{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.contentContainerAdmin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 98%;
+  width: 100%;
+}
+
+.candidateGridContainerAdmin{
+  height: 94%;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.rowCandidateAdmin{
+  margin-right: 0;
+  margin-left: 0;
+  height: 100%;
+  width: 98%;
+}
+
+.candidateCardsAdmin{
+  padding-right:5px;
+  padding-left:5px;
+  min-height: 43%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.ContainerCardsAdmin{
+  padding: 1%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin-bottom: 3%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circleImageAdmin{
+  margin-bottom: 1%;
+  margin-top: 1%;
+ height: 40%;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.circleAdmin{
+  position: relative;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+}
+
+.badgeIconAdmin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:absolute;
+  margin-left: 37px;
+  margin-top: 22px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.textCenterAdmin{
+  text-align: center;
+}
+
+.textCenterAdminUser{
+  text-align: center;
+  margin-top: 15px;
+}
+
+.iconContainerAdmin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  height: auto;
+  width: 80%;
+}
+
+.iconContainerOneAdmin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+}
+
+.alignBottom{
+  position: absolute;
+  bottom: 10px;
+  }
+
+.iconContainerTwoAdmin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.iconContainerThreeAdmin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+}
+
+/* User Dashboard page styling starts here */
+.userProfileCircle{
+  border: 5px solid #fff;
+  border-radius: 50%;
+  box-shadow: rgb(107, 106, 106) 0px 1px 6px 0px;
+}
+
+.heightContainer
+{
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.userDashboardSection .contentContainer
+{
+  width:100%;
+    display: table-cell;
+    top: 0;
+    position: relative;
+    padding-top: 0;
+    bottom: 10px;
+    vertical-align: top;
+    box-shadow: none;
+    left: 20px;
+}
+
+.rowfix.row
+  {
+    position: fixed ;
+    width: 30% ;
+  }
+
+.topCandidatesPartiesCard .borderRadiusCard{
+  border-radius: 0;
+  border: none;
+  position: relative;
+  height: auto;
+}
+
+.userDashboardContainer{
+  width: 100%;
+}
+
+.userDashboardProfileContainer{
+  width: 210px;
+  float: left;
+  position: fixed;
+}
+
+.contentContainerDashboard
+{
+  width: calc(100% - 235px);
+  float: right;
+  margin-left: 0;
+}
+
+.commentTrayBackground{
+  background: #f0f0f0;
+}
+
+/* User Dashboard page styling starts here */
+
+/* Admin candidate profile styling starts from here */
+
+.App{
+  flex-grow: 1;
+  height: auto;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.publicCandOpinion{
+  min-height: 500px;
+}
+
+.adminCandidate{
+    flex-grow: 1;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    margin: auto;
+    text-align: center;
+}
+
+.marginHomeCandidateProfile{
+  font-size: 12px;
+  margin-left: 7%;
+  margin-top: 1%;
+  font-family: montserratregular;
+}
+
+.middleContainer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+/* take care of this margin with media query */
+.candidateProfileCenterContainer{
+  display: flex;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+}
+
+.candidateProfileBoxCol{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 350px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.iconProgressBarContainerCandidateProfile{
+  height: 35%;
+  width: 100%;
+}
+
+.iconContainerCandidateProfile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+  width: 100%;
+}
+
+.likeStyleUserProfile{
+  font-size: 8px;
+}
+
+/* mediaquerry here for the width of box and padding */
+.ContainerCardsCandidateProfile{
+  background-color: #FEF8DF;
+  min-height: 90%;
+  height: auto;
+  margin-left:auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circleImageCandidateProfile{
+ margin-bottom: 10px;
+ margin-top: 10px;
+ height: 30%;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.circleCandidateProfile{
+  position: relative;
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+}
+
+.circlePartyIcon{
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+}
+
+.badgeIconCandidateProfile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:absolute;
+  margin-left: 37px;
+  margin-top: 22px;
+  z-index: 1;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+.textCenterCandidateProfile{
+  text-align: center;
+  font-size: 10px;
+  font-family: montserratregular;
+}
+
+.userNameCandidateProfile{
+  text-align: center;
+  font-size: 18px;
+  font-family: montserratsbold;
+}
+
+.cantSayMargin{
+  margin-left: 20px;
+}
+
+.tabContainerCandidateProfile{
+  height: 100%;
+}
+
+.tabContainer{
+  height: 100%;
+}
+
+.userActivityContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  height: auto;
+  width: 100%;
+}
+
+.headerContainer{
+  display: flex;
+  margin-top: 3%;
+  justify-content: flex-start;
+  height: 50px;
+  width: 100%;
+  padding-left: 3%;
+  background-color: blanchedalmond;
+  border-bottom: 1px solid grey;
+}
+
+.headerContainerActivity{
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid  #f2f2f2;
+}
+
+.newFontStyle{
+  font-family: montserratregular;
+  margin-top:auto;
+  font-size: 14px;
+  margin-bottom: auto;
+}
+
+.activityRow{
+  height: 80%;
+  width: 100%;
+}
+
+.activityNewsCol{
+  padding-left: 0;
+  height: 500px;
+  overflow-y: auto;
+}
+
+.activityNewsCol::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 2px rgba(0,0,0,.3);
+        padding: 2px 0;
+        border-radius: 10px;
+        background-color: white;
+    }
+
+    .activityNewsCol::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    .activityNewsCol::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #FEF8DF;
+    }
+
+.electionInfoCol{
+  padding-top: 10px;
+  height: 500px;
+}
+
+.newsContainer{
+  min-height: 20%;
+  height: auto;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.newsContentStyle{
+  font-size: 12px;
+  font-family: montserratregular;
+  text-align: left;
+}
+
+.commentAndDateContainerUser{
+  height:15%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  margin-top: auto;
+}
+
+.commentsAndLikeContainerUser{
+  height: 50%;
+  width: 50%;
+  display: flex;
+  text-align:center;
+  padding-left: 1%;
+  align-items: center;
+  margin-top: auto;
+}
+
+.likesStyleUser{
+  font-size: 10px;
+  font-family: montserratregular;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.likesStyleUserLeft{
+  font-size: 10px;
+  font-family: montserratregular;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.likesStyleUserLeftOne{
+  font-size: 10px;
+  font-family: montserratregular;
+  margin-top: 6px;
+  margin-bottom: auto;
+}
+
+.likeDisLikeIcon{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.dateAndTimeContainerUser{
+  height: 50%;
+  width: 50%;
+  padding-right: 1%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.electionContainer{
+  border: 1px solid grey;
+  padding-top: 10px;
+  padding-left: 5px;
+  text-align: left;
+  min-height: 8%;
+  width: 100%;
+}
+
+.headingStyleElection{
+  font-size: 12px;
+  font-family: montserratsemibold;
+}
+
+.contentElection{
+  font-size: 11px;
+  font-family: montserratregular;
+}
+
+/* =====================================Poll design================================ */
+
+.optionContainer .optionInputDiv
+{
+  width: calc(100% - 100px);
+}
+
+.fontSemiBold8
+{
+  font-size: 8px;
+  font-weight: bold;
+}
+
+.optionContainer{
+  background-color: #eee;
+}
+
+.timeSelectOptions
+{
+  border-radius: 0px;
+  border: 1px solid black;
+}
+
+.maxTimePoll
+{
+  border: 1px solid black;
+  padding: 3px 6px;
+}
+
+.resultProgressPolls
+{
+  width: calc(100% - 230px);
+  margin-left: auto;
+}
+
+.progress
+{
+  display: flex;
+  height: 6px;
+  overflow: hidden;
+  font-size: .75rem;
+  background-color: #e9ecef;
+  border-radius: .25rem;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #E18F68;
+  -webkit-transition: width .6s ease;
+  transition: width .6s ease;
+}
+
+.textBold
+{
+  font-weight: 800;
+}
+
+.dotCircle
+{
+  height: 15px;
+  width: 15px;
+  border: 2px solid gray;
+  background:#eee;
+  border-radius: 50%;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+.timePolls>div>div>div>div
+{
+  border: 0px;
+}
+
+.timePolls>div>div
+{
+  margin-top: -4px;
+}
+
+.maxTimePoll::-webkit-inner-spin-button,
+.maxTimePoll::-webkit-clear-button {
+  display: none;
+  -webkit-appearance: none;
+}
+
+.maxTimePoll::-webkit-calendar-picker-indicator{
+  background-image: url(images/calendar.png);
+  background-position:center;
+  background-size: 20px auto;
+  width: 25px;
+  height: 25px;
+  background-repeat:no-repeat;
+  color:rgba(204,204,204,0);
+}
+
+.maxTimePoll::-webkit-calendar-picker-indicator.hover{
+  background-color: none;
+}
+
+/* <---------------------------------profile-tabstyles------------------------> */
+.profileTabContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 700px;
+  height: auto;
+  width: 100%;
+}
+
+.headerContainerProfile{
+  display: flex;
+  margin-top: 1%;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: 50px;
+  width: 100%;
+  padding-left: 1%;
+  border-bottom: 1px solid grey;
+}
+
+.generalInformationContainer{
+  min-height: 200px;
+  height: auto;
+  width: 100%;
+}
+
+.generalInfoCol{
+  display: flex;
+  min-height: 100%;
+  height: auto;
+  border-right: 1px solid  #f2f2f2;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.generalInfoStyle{
+  font-size: 12px;
+  font-family: montserratregular;
+}
+
+.detailContainerUser{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  height: auto;
+  padding-left: 5px;
+  width: 30%;
+  text-align:left;
+}
+
+.answerOfDetailCont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  height: auto;
+  width: 70%;
+  text-align:left;
+}
+
+.pieChartColUser{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0;
+  padding-right: 0;
+  min-height: 100%;
+}
+
+.pieChartRow{
+  margin-left: 0;
+  margin-right: 0;
+  height: 70%;
+  width: 100%;
+}
+
+.pieChartOne{
+  padding-left: 0;
+  padding-right: 0;
+  min-height: 100%;
+  height: auto;
+}
+
+.pieChartTwo{
+  padding-left: 0;
+  padding-right: 0;
+  min-height: 100%;
+  height: auto;
+}
+
+.pieChartTwoCont{
+  min-height: 100%;
+  height: auto;
+  width: 100%;
+}
+
+.assetsAndElectionTextRow{
+  margin-top: 2%;
+  margin-left: 0;
+  margin-right: 0;
+  min-height: 30%;
+  height: auto;
+  width: 100%;
+}
+
+.assestTextCandidate{
+  min-height: 100%;
+  height: auto;
+  text-align: left;
+}
+
+.electionTextCandidate{
+  min-height: 100%;
+  height: auto;
+  text-align: left;
+}
+
+.educationContainer{
+  min-height: 100px;
+  height: auto;
+  padding-left: 1%;
+  padding-top: 5px;
+  width: 100%;
+  text-align: left;
+}
+
+.religiousContainer{
+  min-height: 100px;
+  height: auto;
+  margin-right: auto;
+  padding-left: 1%;
+  padding-top: 5px;
+  width: 70%;
+  text-align: left;
+}
+
+/* <-----------------------------Assets-Liabilities-tab*tab-Style -----------------> */
+
+.assetsTabContainer{
+  min-height: 500px;
+  height: auto;
+  width: 100%;
+}
+
+/* <---------------Movable-Assets-Table--------------------> */
+
+.movableAssetsContainer{
+  min-height: 500px;
+  height: auto;
+  width: 100%;
+}
+
+.tableHeader{
+  border: hidden !important;
+  text-align: left !important;
+  font-size: 16;
+  font-family: montserratsemibold;
+  background-color: #FEF8DF;
+}
+
+.tableHeaderTop{
+  border: hidden !important;
+  text-align: center !important;
+  font-size: 16;
+  font-family: montserratbold;
+  background-color: #FEF8DF;
+}
+
+.tableheaderTwo{
+  border: hidden !important;
+  text-align: left !important;
+  font-size: 16;
+  font-family: montserratsemibold;
+  background-color: #FEF8DF;
+}
+
+.tableheaderCriminal{
+  border: hidden !important;
+  text-align: center !important;
+  font-size: 16;
+  font-family: montserratmedium;
+  background-color: #FEF8DF;
+}
+
+.tableheaderFinancial{
+  border: hidden !important;
+  text-align: left !important;
+  font-size: 16;
+  margin-right: 0;
+  margin-left: 0;
+  font-family: montserratmedium;
+  background-color: #FEF8DF;
+}
+
+.bankingHeader{
+  height: 48px;
+  width: 100%;
+  line-height: 48px;
+  text-align: left;
+  padding-left: 10px;
+  background-color: #FEF8DF;
+}
+
+.tableCell{
+  font-size: 14;
+  font-family: montserratregular;
+  border: hidden !important;
+  text-align: left !important;
+}
+
+.tableCellTwo{
+  font-size: 14;
+  font-family: montserratregular;
+  border: hidden !important;
+  text-align: left !important;
+}
+
+.tableCellCriminal{
+  font-size: 14;
+  font-family: montserratregular;
+  border: hidden !important;
+  text-align: center !important;
+}
+
+.bankingRow{
+  margin-top: 2%;
+  min-height: 100px;
+  background-color: lawngreen;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.banckingCol1{
+  min-height: 20px;
+  background-color:  white;
+}
+
+.banckingCol2{
+  min-height: 20px;
+  background-color: white;
+}
+
+.movableAssestHeaderContainer{
+  min-height: 100%;
+  width: 100%;
+  padding-left: 0;
+  margin-top: 2%;
+  padding-right: 0;
+}
+
+.movableAssetsHeader{
+  min-height: 48px;
+  line-height: 48px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.agricultureHeader{
+  min-height: 48px;
+  line-height: 48px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.agricultureContainer{
+  min-height: 100%;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.tableHeaderMovable{
+  border: hidden !important;
+  text-align: center !important;
+  font-size: 16;
+  font-family: montserratmedium;
+}
+
+.tableCellMovable{
+  border: hidden !important;
+  text-align: center !important;
+}
+
+.dataContainer{
+  min-height: 100%;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.tableHeaderAgriculture{
+  border: hidden !important;
+  text-align: left !important;
+  font-size: 16;
+  font-family: montserratmedium;
+  background-color: #FEF8DF;
+}
+
+.chargesFramedContainer{
+  min-height: 300px;
+  width: auto;
+  line-height: 300px;
+  text-align: center;
+}
+
+.noCases{
+  color: grey;
+}
+
+/* <------------------publicOpinionTab-styles-----------------> */
+
+.publicOpinionTab{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.publicOpinionContainer{
+  min-height: 150px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.publicOpinionRow{
+  min-height: 150px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.imageNameCol{
+  display: flex;
+  margin-top: 3%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.userImage{
+  height: 66.4px;
+  width: 66.4px;
+}
+
+.marginUser{
+  margin-top: 15px;
+}
+
+.inputCol{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.buttonCommentContainer{
+  display: flex;
+  justify-content: flex-end;
+  height: 5%;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.buttonBorder{
+  display: flex;
+  justify-content: flex-end;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.commentsArrayContainer{
+  min-height: 150px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.commentsArea{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.commentAndDateCont{
+  height:15%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+}
+
+/* Admin political parties styling starts here */
+
+.App{
+  flex-grow: 1;
+  height: auto;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.topHomeTextContainerPoliticalAdmin{
+  height: 4%;
+  line-height: 4%;
+  padding-left: 6%;
+  width: 100%;
+  background-color: #F4F2F0;
+}
+
+.areaTopPoliticalAdmin{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.homeAreaPoliticalAdmin{
+  background-color: #F4F2F0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.AddPartyList{
+  margin-left: 5%;
+}
+
+.dashboardContainerPoliticalAdmin{
+  height: auto;
+  width: 93%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  margin-top: 1%;
+  margin-bottom: 2.5%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboardTextContainerPoliticalAdmin{
+  display: flex;
+  justify-content: flex-start;
+  height: auto;
+  width: 30%;
+}
+
+.buttonsContainerCandidatePoliticalAdmin{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: auto;
+  width: 40%;
+}
+
+.dashboardTextStylePoliticalAdmin{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.contentContainerPoliticalAdmin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: auto;
+  width: 100%;
+}
+
+.candidateGridContainerPoliticalAdmin{
+  height: auto;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.rowCandidatePoliticalAdmin{
+  margin-right: 0;
+  margin-left: 0;
+  height: 100%;
+  width: 98%;
+}
+
+.candidateCardsPoliticalAdmin{
+  padding-right:5px;
+  padding-left:5px;
+  min-height: 230px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.ContainerCardsPoliticalAdmin{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin-bottom: 3%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circleImagePoliticalAdmin{
+  margin-bottom: 1%;
+  margin-top: 1%;
+ height: 40%;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.circlePoliticalAdmin{
+  position: relative;
+  border-radius: 50%;
+  width: 100%;
+}
+
+.textCenterPoliticalAdmin{
+  text-align: center;
+  margin-top: 8px;
+}
+
+.iconContainerPoliticalAdmin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.iconContainerOnePoliticalAdmin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+}
+
+.iconContainerTwoPoliticalAdmin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.iconContainerThreePoliticalAdmin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+}
+
+.likesStyleUserLeftPoliticalAdmin{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.likesStyleUserLeftOnePoliticalAdmin{
+  margin-top: 2px;
+  margin-bottom: auto;
+}
+
+iconContainerThreeAdmin .MuiBackdrop-root-162{
+  background-color: blue;
+}
+
+/* details added success styling starts from here */
+
+.tabContainerCardSuccess{
+  min-height: 60%;
+  width: 100%;
+  padding: 0;
+  background-color: #FEF8DF;
+}
+
+.partyAddedContainer{
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.checkedCont{
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkedRow{
+ height: inherit;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.checkedCol{
+ height: inherit;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+.addedText{
+  margin-bottom: 6%;
+  margin-top: -5px;
+}
+
+/* forgot password page styling starts from here */
+
+.forgotPasswordPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-flow: 1;
+  height: 95vh;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color:  white;
+}
+
+.topContainerForgotPassword{
+  display: flex;
+  height: 30%;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.recContainerForgotPassword{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+}
+
+.forgotPasswordElectionAppTextContainer{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50%;
+}
+
+.headingTextForgotPassword{
+  color: black;
+  font-weight: 400;
+}
+
+.formContainerForgotPassword{
+ display: flex;
+ align-items: flex-start;
+ justify-content: center;
+ height: 70%;
+ width: 100%;
+}
+
+.formBoxForgotPassword{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+}
+
+.textBoxForgotPassword{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:60%;
+  height: 15%;
+}
+
+.textStyleForgotPassword{
+  font-weight: 600;
+}
+
+/* Home page styling  starts here */
+
+.overflow_x
+{
+  overflow-x: hidden;
+}
+
+.fourItemContainer .card-body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px rgba(0,0,0,.3);
+  padding: 2px 0;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.fourItemContainer .card-body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.fourItemContainer .card-body{
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 180px;
+  margin-bottom: -10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.card-body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #FEF8DF;
+}
+
+.homePageContainerAdmin{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  overflow-x:hidden;
+
+}
+.topHomeTextContainerAdmin{
+  height: 4%;
+  width: 100%;
+  background-color: #F4F2F0;
+}
+.areaTopAdmin{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.homeAreaAdmin{
+  background-color: #F4F2F0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.marginHomeAdmin{
+  font-size: 12px;
+  margin-left: 7%;
+  margin-top: 1%;
+}
+
+.dashboardHomeContainerAdmin{
+  height: 4%;
+  width: 91%;
+  display: flex;
+  margin-top: 1%;
+  margin-bottom: 2.5%;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.dashboardTextStyleAdmin{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.contentContainerAdmin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 92%;
+  margin-bottom: 4%;
+  width: 95%;
+}
+
+.gridContainerAdmin{
+  height: 91%;
+  width: 96%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recentPostContainerAdmin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.rencentPostColumnAdmin{
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.recentPostContentContainerAdmin{
+  height: 100%;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  background-color: white;
+  display: flex;
+  box-shadow: 0 0 3px grey;
+  flex-direction: column;
+}
+
+.recentPostHeaderAdmin{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1%;
+  height: 6%;
+  width: 100%;
+  background-color: #FDCE59;
+}
+
+.recentPostTextAdmin{
+  margin-top:auto;
+  margin-bottom: auto;
+}
+
+.recentPostTextContainerAdmin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 94%;
+  width: 100%;
+}
+
+.recentPostOneAdmin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  min-height: 20%;
+  width: 100%;
+}
+
+.textScrollRecentPostAdmin{
+  height: inherit;
+  width: inherit;
+}
+
+.scrollTextAreaAdmin{
+  display: flex;
+  margin-top: 3%;
+  align-items: center;
+  height: 80%;
+  width: 95%;
+}
+
+.commentAndDateContainerAdmin{
+  height:15%;
+  width: 95%;
+  display: flex;
+  margin-top: 18px;
+}
+
+.commentsAndLikeContainerAdmin{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  margin-top: 18px;
+}
+
+.likesStyle{
+  font-size: 10px;
+}
+
+.dateAndTimeContainerAdmin{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.recentPostTwoAdmin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 20%;
+  height: auto;
+  width: 100%;
+  border-top: 1px solid grey;
+  border-bottom:1px solid grey;
+}
+
+.recentPostThreeAdmin{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  min-height: 20%;
+  height: auto;
+  width: 100%;
+}
+
+.recentPostFourAdmin{
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid grey;
+  border-bottom:1px solid grey;
+  flex-direction: column;
+  align-items: center;
+  min-height: 20%;
+  height: auto;
+  width: 100%;
+}
+
+.recentPostFiveAdmin{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  min-height: 20%;
+  height: auto;
+  width: 100%;
+}
+
+.threeColumnAdmin{
+  height: inherit;
+  background-color: white;
+}
+
+.lastTwoColumnAdmin{
+  height: inherit;
+}
+
+.currentElectionRowAdmin{
+  height: 65%;
+  margin-bottom: 1%;
+}
+
+.currentElectionColAdmin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 49%;
+  margin-bottom: 1%;
+}
+
+.currenElectionHeaderAdmin{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1%;
+  height: 20%;
+  width: 100%;
+  background-color: #FDCE59;
+}
+
+.pieAndTableSubContainerAdmin{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+}
+
+.pieChartContainerAdmin{
+  display: flex;
+  height: 80%;
+  width: 50%;
+}
+
+.tableContainerAdmin{
+  height: 80%;
+  width: 50%;
+}
+
+.pieAndTableContainerAdmin{
+  height: 100%;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  display: flex;
+  box-shadow: 0 0 3px grey;
+  flex-direction: column;
+}
+
+.topSiteColAdmin{
+  height: 50%;
+}
+
+.topSiteContainerAdmin{
+  height: 100%;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  display: flex;
+  box-shadow: 0 0 3px grey;
+  flex-direction: column;
+}
+
+.lineGraphContainerAdmin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+  width: 100%;
+}
+
+.siteUsersRowAdmin{
+  height: 33%;
+}
+
+.topCandidatesRowAdmin{
+  height: 34%;
+}
+
+.topCandidateColAdmin{
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+.topCandidateContainerAdmin{
+  height: 100%;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  display: flex;
+  box-shadow: 0 0 3px grey;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+}
+
+.topCandidateHeaderAdmin{
+  text-align: left;
+  padding-left: 1%;
+  height: 20%;
+  width: 100%;
+  background-color: #FDCE59;
+}
+
+.mediaObjectContainerAdmin{
+  height: 84%;
+  width: 98%;
+}
+
+.candidateOneAdmin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:auto;
+  height: 33%;
+  width: 100%;
+  background-color: white;
+}
+
+.mediaContainerAdmin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.centerMediaContainerAdmin{
+  margin-bottom: auto;
+  margin-top: 2%;
+  height: 100%;
+  width: 100%;
+}
+
+.likeAndDisLikeAdmin{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+}
+
+.likeAndDislikeSubAdmin{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.candidateTwoAdmin{
+  height: 33%;
+  width: 100%;
+}
+
+.candidateThreeAdmin{
+  height: 33%;
+  width: 100%;
+}
+
+.nameAdmin{
+  display: flex;
+  flex-direction: column
+}
+
+.mediaCenterAdmin{
+ height: 100%;
+ width: 100%;
+box-shadow: none
+}
+
+.headingMediaAdmin{
+  margin-top: auto;
+  margin-bottom: auto;
+ font-size: 10px;
+}
+
+.commentsRowAdmin{
+  height: 65%;
+  background-color: white;
+  margin-bottom: 1%;
+}
+
+.commentsColAdmin{
+  height: 100%;
+  width: 100%;
+}
+
+.commentContainerAdmin{
+  height: 100%;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  display: flex;
+  box-shadow: 0 0 3px grey;
+  flex-direction: column;
+}
+
+.commentHeaderAdmin{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1%;
+  height: 9%;
+  width: 100%;
+  background-color: #FDCE59
+}
+
+.topPartiesRowAdmin{
+  height: 34%;
+}
+
+.topPartiesContainerAdmin{
+  height: 100%;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  display: flex;
+  box-shadow: 0 0 3px grey;
+  flex-direction: column;
+}
+.borderRadiusCardAdmin{
+  border-radius: 0;
+  border: none;
+  height: auto;
+  bottom: 55px;
+}
+
+/* Admin login page media query starts from here */
+
+.loginPage{
+  flex-flow: 1;
+  height: 100vh;
+}
+
+.topContainerLogin{
+  height: 30%;
+}
+
+.LoginElectionAppTextContainer{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50%;
+}
+
+.headingTextLogin{
+  color: black;
+  font-weight: 400;
+}
+
+.formContainerLogin{
+ height: 70%;
+}
+
+.formBoxLogin{
+  height: 70%;
+}
+
+.forgotPasswordBoxLogin{
+  width:60%;
+  height: 10%;
+}
+
+.ForgotTextStyleLogin{
+  font-size: 10px;
+  color: black;
+}
+
+.text-transform-capitalize {
+  text-transform: capitalize;
+}
+
+.loginTextBox{
+  width:60%;
+}
+
+.validationContAdminLogin{
+  height: 25px;
+  position: relative;
+}
+
+/* Reset password page styling starts from here */
+
+.resetPasswordPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-flow: 1;
+  height: 95vh;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color:  white;
+}
+
+.topContainerResetPassword{
+  display: flex;
+  height: 30%;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.recContainerResetPassword{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+}
+
+.resetPasswordElectionAppTextContainer{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50%;
+}
+
+.headingTextResetPassword{
+  color: black;
+  font-weight: 400;
+}
+
+.formContainerResetPassword{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 70%;
+ width: 100%;
+}
+
+.formBoxResetPassword{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 70%;
+}
+
+.resetPasswordTextBox{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width:60%;
+  height: 15%;
+}
+
+.resetPasswordTextStyle{
+  font-weight: 600;
+}
+
+/* <------------- Site feedback box design ---------------> */
+
+.siteFeedbackContainer{
+  position: fixed;
+  z-index: 1;
+  top: 42%;
+  box-shadow: 1px -5px 10px #8080808c;
+  height: 50px;
+}
+
+.siteFeedbackButton{
+  position: inherit;
+  transform: rotate(270deg);
+  padding: 10px;
+  right: -95px;
+  padding-right: 50px;
+  padding-left: 50px;
+  background: #e18f68;
+  color: white;
+}
+
+.modifiedSiteFeedback .siteFeedbackButton{
+  right: -78px;
+}
+
+.siteFeedbackFormContainer{
+  top: 0;
+  position: inherit;
+  right: 0;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  background: #8080806b;
+  z-index: 1;
+}
+
+.siteFeedbackForm{
+  top: 30%;
+  position: inherit;
+  right: 0;
+  background: white;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  width: 450px;
+}
+
+.siteFeedbackCloseIcon{
+  position: absolute;
+  top: -70px;
+  right: -5px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.siteFeedbackTextArea{
+  min-height: 100px;
+  max-height: 100px;
+  margin-bottom: 3px;
+}
+
+.siteFeedbackTextArea:focus{
+  box-shadow: none;
+  border: 1px solid #ced4da;
+}
+
+.aboutUsBanner{
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.aboutUsBannerImage{
+  width: 80%;
+  object-fit: cover;
+}
+
+/* <------------add-user-info------------------------------> */
+
+.addUserDatePicker{
+  margin: auto;
+  height: 50px;
+  border: none;
+  margin-left: 10px;
+  color: #A5A5A5;
+}
+
+.addUserDatePicker .react-datepicker-wrapper{
+  height: 50px;
+  width: 92%;
+  border: none;
+  color: #A5A5A5;
+}
+.addUserDatePicker .react-datepicker__input-container{
+  height: 50px;
+  width: 100%;
+  border: none;
+  color: #A5A5A5;
+}
+.datePicker.addUserDate{
+  border-width: 0px;
+  border: 0;
+  padding-left: 5px;
+  font-size: 14px;
+  color: #A5A5A5;
+}
+
+/* <---------------add-user-info----------------------------> */
+
+/* general styling for fonts and dom genral ( box shadow background color) */
+
+.wordBreak{
+  word-break: break-all
+}
+
+.font-30{
+  font-size: 30px !important;
+}
+
+.fontRegular12 {
+  font-family: montserratregular;
+  font-size: 12px;
+}
+.fontRegular8{
+  font-family: montserratregular;
+  font-size: 8px;
+}
+
+.fontRegular14 {
+  font-family: montserratregular;
+  font-size: 14px;
+}
+
+.fontRegular16 {
+  font-family: montserratregular;
+  font-size: 16px;
+}
+.fontRegular10 {
+  font-family: montserratregular;
+  font-size: 10px;
+}
+
+.fontRegular13 {
+  font-family: montserratregular;
+  font-size: 13px;
+}
+
+.fontRegular18 {
+  font-family: montserratregular;
+  font-size: 18px;
+}
+
+.fontMedium14 {
+  font-family: montserratmedium;
+  font-size: 14px;
+}
+
+.fontMedium16 {
+  font-family: montserratmedium;
+  font-size: 16px;
+}
+
+.fontSemiBold13 {
+  font-family: montserratsemibold !important;
+  font-size: 13px !important;
+}
+
+.fontSemiBold14 {
+  font-family: montserratsemibold !important;
+  font-size: 14px !important;
+}
+
+.fontSemiBold16 {
+  font-family: montserratsemibold;
+  font-size: 16px;
+}
+
+.fontSemiBold18 {
+  font-family: montserratsemibold;
+  font-size: 18px;
+}
+
+.fontSemiBold12 {
+  font-family: montserratsemibold;
+  font-size: 11px;
+}
+
+.fontSemiBold {
+  font-family: montserratsemibold;
+  font-size: 24px;
+}
+
+.tableColor{
+  color: #FEF8DF;
+  background-color: #FEF8DF;
+}
+
+.lightBackgroundColor{
+  background-color: #FEF8DF;
+}
+
+.darkBackground{
+  background-color: #E18F68;
+}
+
+.darkTheme{
+  color:#E18F68;
+}
+
+.fontBold50{
+  font-family: montserratbold;
+  font-size: 50px;
+}
+
+.fontBold40{
+  font-family: montserratbold;
+  font-size: 40px;
+}
+
+.fontBold12{
+  font-family: montserratbold;
+  font-size: 12px;
+}
+
+.fontBold10 {
+  font-family: montserratbold;
+  font-size: 10px;
+}
+
+.fontBold14{
+  font-family: montserratbold;
+  font-size: 14px;
+}
+
+.fontBold16{
+  font-family: montserratbold;
+  font-size: 16px;
+}
+
+.fontBold20{
+  font-family: montserratbold;
+  font-size: 16px;
+}
+
+.fontBold22 {
+  font-family: montserratbold;
+  font-size: 22px;
+}
+
+.fontBold28{
+  font-family: montserratbold;
+  font-size: 28px;
+}
+
+.fontBold26{
+  font-family: montserratbold;
+  font-size: 26px;
+}
+
+.fontBold17{
+  font-family: montserratbold;
+  font-size: 17px;
+}
+
+.fontBold18{
+  font-family: montserratbold;
+  font-size: 18px;
+}
+
+.fontBold{
+  font-family: montserratbold;
+  font-size: 20px;
+}
+
+.fontBoldItalic{
+  font-family:  montserratbolditalic;
+  font-size: 12px;
+}
+
+.fontThinItalic12 {
+  font-family:  montserratthinitalic;
+  font-size: 10px;
+}
+
+.fontColor{
+  color: white;
+}
+
+.cursorPointer{
+  cursor: pointer;
+}
+
+.cursorDefault{
+  cursor: default;
+}
+
+.greyFontColor{
+  color: #555555 !important;
+}
+
+.fontLightColor {
+  color: #E18F68;
+}
+
+.NoPad{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.leftNoPad{
+  padding-left: 0;
+}
+
+.rightNoPad{
+  padding-right: 0;
+}
+
+.noBorderRadius{
+  border-radius: 0px;
+}
+
+.input-group>.custom-file:focus, .input-group>.custom-select:focus, .input-group>.form-control:focus {
+  z-index: 0;
+}
+
+.noMargin{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.LittleTopBottomMargin{
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+.bottomMargin{
+  margin-bottom: 2%;
+}
+
+.checkBoxHeight{
+  height: 40px;
+}
+
+.heading_height{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  padding: 0px 3px 0px 3px;
+}
+
+.wordBreak{
+  word-break: break-all;
+}
+
+.validationColor{
+  color: red;
+}
+
+.boxShadow{
+  box-shadow: rgb(107, 106, 106) 0px 1px 6px 0px;
+}
+
+.greyBoxShadow{
+  box-shadow: 0 0 3px gray;
+}
+
+/* Admin Navbar styling */
+
+.linkRouter{
+  color: grey;
+  font-family: montserratsemibold;
+  font-size: 18px;
+  text-transform:  capitalize;
+}
+
+.activeStyle{
+  color: #E18F68;
+}
+
+.linkRouter:hover {
+   color: #E18F68;
+}
+
+.fontNavbar{
+  font-family: montserratsemibold;
+  font-size: 16px;
+}
+
+/* Add user Info styling */
+
+.formContainerLogin .react-datepicker__input-container{
+  width: 100%;
+  margin: auto;
+  background: #fff;
+}
+
+.formContainerLogin .react-datepicker-wrapper
+{
+  width: 100%;
+  background-color: #fff;
+  margin: auto;
+}
+
+.datePickerUpdateUserInfo{
+ height: 20%;
+ width: calc(90% - 20px);
+}
+
+.datePickerUpdateUserInfo .dateInput
+{
+    height: 50px;
+    padding-left: 40px;
+    border: 0px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.datePickerUpdateUserInfo .dateInput::placeholder
+{
+  color: #A5A5A5;
+  font-weight: 800;
+}
+
+.datePickerUpdateUserInfo{
+  background-color: #fff;
+}
+
+.datePickerUpdateUserInfo .dateInput:focus
+{
+  outline: none;
+}
+
+.datePickerUpdateUserInfo .iconCalender{
+  top: 28px;
+    left: 13px;
+    font-size: 20px;
+    color:#A5A5A5;
+}
+
+/* Admin Profile styling starts here */
+
+.adminProfileImageDiv{
+  border-radius: 50%;
+}
+
+.adminProfileImageDiv .pencilAdminProfile{
+  right: -3px;
+    top: 60px;
+    background-color: blue;
+    padding: 5px 5px 5px 5px;
+    border-radius: 50%;
+    color: white;
+}
+
+.contheight
+{
+  min-height: 90vh;
+}
+
+.overlay.overlayElectionCandidate{
+  height: 100%;
+  width: 96%;
+  top: 0;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,.9);
+  visibility: hidden;
+}
+
+.buttonElectionDetail.button{
+    width: 170px;
+    white-space: nowrap;
+    background: #EB6D4A !important;
+}
+
+.buttonElectionDetail.button:after{
+  display: block;
+  position: absolute;
+  opacity: 1;
+  padding: 0px;
+  margin: 0px;
+}
+
+.overlayHover:hover .overlay.overlayElectionCandidate {
+  visibility: visible;
+}
+
+.overlayHover:focus .overlay.overlayElectionCandidate {
+  visibility: visible;
+}
+
+.iconButtonElectionDetail{
+  position: absolute;
+  top: 19px;
+  left: 15px;
+  z-index: 1;
+  color: white;
+  font-size: 20px;
+}
+
+.previewSection{
+  min-height: 500px;
+  border: 1px solid #A5A5A5;
+  box-shadow: 0 0 5px #A5A5A5;
+  width: 100%;
+  overflow-y: auto;
+
+}
+
+/* Styles for user app bar starts here */
+
+.root{
+  width: 100%;
+  height: 100px;
+}
+
+.appBarStyle{
+  box-shadow: none !important;
+  background-color: #FEF8DF !important;
+  line-height: 5;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.headerMenuContainer{
+  width: 94%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logoBox{
+  width: 15%;
+  float: left;
+  text-align: left;
+  margin-left: 25px;
+}
+
+.menuBox{
+  width: 60%;
+  float: left;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.loginButtonsBox{
+  width: 20%;
+  justify-content: flex-end;
+  margin-right: 25px;
+}
+
+.iconMargin{
+  margin-right: 10px;
+}
+
+.changeColor{
+  color: #E18F68;
+  font-size: 18px;
+}
+
+.changeColor span{
+  color: #E18F68;
+}
+
+.paddingSearch{
+  height: 50px;
+}
+
+.paddingSearch:hover{
+  background-color: transparent !important;
+}
+
+.searchIcon{
+  width: 20px;
+}
+
+.profileMenu{
+  top: 50px !important;
+}
+
+.headerUserImg{
+  width: 32px;
+  height: 32px;
+  border: 2px solid #E18F68;
+  max-width: 32px;
+  max-height: 32px;
+  overflow: hidden;
+}
+
+.userName{
+  color: #E18F68 !important;
+}
+
+/* filter functionlity css */
+
+.filterBox .fa-filter{
+  position: absolute;
+  top: -20px;
+  border-radius: 3px;
+  border: 1px solid black;
+  padding: 6px 8px 6px 8px;
+}
+
+.z-indexUp{
+  z-index: 1;
+  height: 30px;
+  font-size: 14px;
+}
+
+.zIndex{
+  z-index: 2;
+}
+
+.formBorder{
+  border: 1px solid #CED4DA;
+}
+
+.formFontColor{
+  color: #9A9A9A;
+}
+
+.nothingText{
+  bottom: 40px;
+  left: 100px;
+}
+
+.filterBox .card_panel {
+  left: -106px;
+  cursor: pointer;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 1;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+      background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.filterBox .card_panel_party {
+  left: -156px;
+  cursor: pointer;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 1;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+      background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.filterBox .card_panel_party .back{
+  width: 400px;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  margin-top: 15px;
+  -webkit-transform: rotateX(-180deg);
+     -moz-transform: rotateX(-180deg);
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+  -webkit-transition: all .4s ease-in-out;
+     -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+     -o-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+}
+
+.filterBox .card_panel .back {
+  width: 400px;
+  /* height: 200px; */
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  margin-top: 15px;
+  -webkit-transform: rotateX(-180deg);
+     -moz-transform: rotateX(-180deg);
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+  -webkit-transition: all .4s ease-in-out;
+     -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+     -o-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+}
+
+.filterBox .card_panel.flip .front {
+  z-index: 900;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+}
+
+.filterBox .card_panel.flip .back {
+  z-index: 1000;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+}
+
+.filterBox .card_panel.flip .newBack {
+ height: 300px;
+ width: 400px;
+ z-index: 1000;
+ margin-top: 10px;
+ -webkit-transform: rotateX(0deg) rotateY(0deg);
+ -moz-transform: rotateX(0deg) rotateY(0deg);
+}
+
+.filterBox .card_panel_party.flip .front {
+  z-index: 900;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+}
+
+.filterBox .card_panel_party.flip .back {
+  z-index: 1000;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+}
+
+.filterBox .card_panel_party.flip .newBack {
+ height: 300px;
+ width: 400px;
+ z-index: 1000;
+ margin-top: 10px;
+ -webkit-transform: rotateX(0deg) rotateY(0deg);
+ -moz-transform: rotateX(0deg) rotateY(0deg);
+}
+
+.filterBox .box2{
+  width: 100%;
+  background-color: #fcfcfc;
+  height: 100%;
+
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #E18F68;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+.filterBox .btn-default
+{
+  background: #E18F68 !important;
+  color: white;
+  padding: 5px 12px 5px 12px;
+}
+
+.filterBox .button:after
+{
+  position: absolute;
+  content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 0px;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    opacity: 0;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+.stateHeader{
+  height: 20px;
+  width: 100%;
+}
+
+/* Styles for user app bar ends here */
+
+/*Styles for Constituency details page starts here*/
+
+.collapsibleMenuItem{
+  height: 35px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding: 0 15px;
+}
+
+.activeDistrict{
+  background: #E18F68;
+  color: white;
+}
+
+.constituencyDetailContainer .filterCandidateContainer {
+  width: 300px;
+  z-index: 0;
+  background-color: #fff;
+}
+
+.candidateProfile{
+  min-height: 220px;
+  background: #FEF8DF;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+}
+
+.candidateProfile .badgeIcon{
+  width: 40px;
+  height: 40px;
+  margin-top: 55px;
+  margin-left: -30px;
+}
+
+.partyImage{
+  width: 100%;
+}
+
+.candidateDetails{
+  height: 100%;
+  min-height: 200px;
+}
+
+.constituencyDetailContainer .filterCandidate{
+  height: 75vh;
+  overflow: auto;
+}
+
+.constituencyDetailContainer .filterCandidate::-webkit-scrollbar{
+  display: inherit;
+  width: 5px;
+}
+
+.candidateProfileElections{
+  width: 210px;
+  margin-right: 15px;
+  display: inline-block;
+  z-index: -5;
+}
+
+.candidateProfileElectionsContainer{
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.candidateProfileElectionsContainer::-webkit-scrollbar{
+  display: none;
+}
+
+.backBtn{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: -20px;
+  z-index: 0;
+  top: 43%;
+}
+
+.backBtn span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #e18f68;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.nextBtn{
+  width: 40px;
+  position: absolute;
+  z-index: 0;
+  top: 43%;
+  right: -20px;
+}
+
+.table thead th
+{
+  border: 0px
+}
+
+.table{
+  margin-bottom: 0px;
+}
+
+.nextBtn span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #e18f68;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.currentLeaderCard{
+  width: 210px;
+  margin-right: 10px;
+}
+
+.constituencyDetails{
+  width: calc(100% - 220px);
+}
+
+/*Styles for Constituency details page ends here*/
+
+.upDownVoteImage{
+  width: 25px;
+}
+
+/*Styles for user login page*/
+
+.loginImages{
+  width: 30px;
+}
+
+.googleIcon{
+  width: 20px;
+}
+
+.facebookIcon{
+  width: 10px;
+}
+
+.logoImageHeader{
+  width: 200px;
+}
+
+.mediumScreenHeader
+{
+  display: none;
+}
+
+.otherDetail{
+  word-break: break-all;
+  width: 350px;
+}
+
+.commentBoxInput{
+  padding: 7px 100px 8px 5px;
+}
+
+/* Media Query starts from here */
+
+@media (min-width: 992px) and (max-width: 1600px) {
+
+  .constituencyDetailContainer .filterCandidate{
+    min-height: 75vh;
+  }
+
+  .constituencyDetailContainer .filterCandidateContainer{
+    width: 300px;
+  }
+
+  .linkRouter{
+    font-size: 16px;
+  }
+
+  .linkRouter span{
+    font-size: 12px;
+  }
+
+  .userInfoCont{
+    min-width: 40vw;
+  }
+
+  .linkRouter button span{
+    font-size: 15px;
+  }
+
+  .linkRouter button{
+    font-size: 15px;
+    padding: 0px 8px;
+  }
+
+  .userHeader{
+    height: 75px;
+  }
+
+  .headerImgs{
+    width: 20px;
+    height: 20px;
+  }
+
+  .logoImageHeader{
+    width: 150px ;
+  }
+
+  .topContainerUserTop .SearchBoxColUserHome{
+    min-height: 150px;
+    margin-bottom: 50px;
+  }
+
+  .fontBold28{
+    font-size: 20px;
+  }
+
+  .checkMajorityMargin{
+    margin-top: 30px;
+    margin-bottom: 75px;
+  }
+
+  .browseElectionMargin{
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  .fontSemiBold{
+    font-size: 18px;
+  }
+
+  .fontRegular14{
+    font-size: 12px;
+  }
+
+  .commentBoxInput{
+    font-size: 14px;
+  }
+
+  .ql-editor{
+    font-size: 12px;
+  }
+
+  .commentSection p{
+    font-size: 12px;
+  }
+
+  .fourItemTopContainer{
+    height: 160px;
+    line-height: 13px;
+  }
+
+  .fourItemTopContainer .explorePartiesCol{
+    height: 160px;
+    line-height: 13px;
+  }
+
+  .fourItemTopContainer .exploreCandidateCol{
+    height: 160px;
+    line-height: 13px;
+  }
+
+  .fourItemTopContainer .upvotedPartiesCol{
+    height: 160px;
+  }
+
+  .fourItemTopContainer .upvotedCandidateCol{
+    height: 160px;
+  }
+
+  .userDashboardContainer .upvotedPartiesCol{
+    height: auto;
+  }
+
+  .userDashboardContainer .upvotedCandidateCol{
+    height: auto;
+  }
+
+  .fontBold20{
+    font-size: 14px;
+  }
+
+  .fontBold{
+    font-size: 16px;
+  }
+
+  .fontRegular16{
+    font-size: 12px;
+  }
+
+  .footerSmallTextTop{
+    font-size: 12px;
+  }
+
+  .footerSmallText{
+    font-size: 10px;
+  }
+
+  .searchIcon{
+    width:15px;
+  }
+
+  .fontBold40{
+    font-size: 28px;
+  }
+
+  .logoBox{
+    margin-left: 0;
+  }
+
+  .loginButtonsBox{
+    margin-right: 0;
+  }
+
+  .iconMargin{
+    margin-right: 5px;
+  }
+
+  .loginImages{
+    width: 22px;
+  }
+
+  .iconBackground{
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  .googleIcon{
+    width: 18px;
+  }
+
+  .facebookIcon{
+    width: 8px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1024px) {
+    .logoImageHeader{
+      width: 120px ;
+    }
+
+    .linkRouter button{
+      padding: 0 5px;
+    }
+
+    .headerUserImg{
+      width: 25px;
+      height: 25px;
+    }
+
+    .menuListItem{
+      padding-top: 8px !important;
+      padding-bottom: 8px !important;
+    }
+
+    .card-body{
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .upDownVoteImage{
+      width: 15px;
+    }
+
+  }
+}
+
+@media (max-width: 960px){
+  .globalSearchHideFunc.globalSearchHide{
+    display: flex !important;
+  }
+  @media (max-width: 959px){
+    .mediumScreenHeader
+    {
+      display: block;
+      z-index: 1;
+    }
+    .fixedMediumHeader
+    {
+      width: 100%;
+      position: fixed;
+      z-index: 1;
+    }
+    .homeArea{
+      margin-top: 35px;
+    }
+
+    .marginTop60
+    {
+      margin-top: 60px;
+    }
+
+    .marginTop40
+    {
+      margin-top: 40px;
+    }
+
+    .marginTop80
+    {
+      margin-top: 80px;
+    }
+
+    .searchIcon
+    {
+      display: none;
+    }
+
+    .loginButtonsBox {
+      width: 250%;
+      justify-content: flex-end;
+      margin-right: 25px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .rowfix.row
+  {
+    position: static ;
+    width:  100%;
+  }
+
+  .partyProfileSection .commentShow {
+    border-right: 0px solid grey;
+  }
+
+  .profileBorder{
+    border-right: 0px;
+  }
+
+  .candidateProfileContainer .commentShow{
+    border-right: 0px solid grey;
+  }
+
+  .linkRouter button span{
+    font-size: 12px;
+  }
+
+  .topContainerUserTop .SearchBoxColUserHome{
+    min-height: 130px;
+    margin-bottom: 50px;
+  }
+
+  .fontBold28{
+    font-size: 20px;
+  }
+
+  .checkMajorityMargin{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .browseElectionMargin{
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  .fontSemiBold{
+    font-size: 18px;
+  }
+
+  .fontRegular14{
+    font-size: 12px;
+  }
+
+  .commentBoxInput{
+    font-size: 14px;
+  }
+
+  .fontRegular12{
+    font-size: 10px;
+  }
+
+  .fontBold40{
+    font-size: 26px;
+  }
+
+  .fourItemTopContainer .explorePartiesCol{
+    height: 130px;
+  }
+
+  .fourItemTopContainer .exploreCandidateCol{
+    height: 130px;
+    margin-bottom: 50px;
+  }
+
+  .fourItemTopContainer .upvotedPartiesCol{
+    height: 160px;
+  }
+
+  .fourItemTopContainer .upvotedCandidateCol{
+    height: 160px;
+  }
+
+  .fontBold20{
+    font-size: 14px;
+  }
+
+  .fontBold{
+    font-size: 16px;
+  }
+
+  .fontRegular16{
+    font-size: 12px;
+  }
+
+  .footerSmallTextTop{
+    font-size: 12px;
+  }
+
+  .footerSmallText{
+    font-size: 10px;
+  }
+
+  .searchIcon{
+    width: 15px;
+  }
+
+  .loginButtonsBox button{
+    font-size: 12px;
+    padding: 0px;
+    min-width: 55px;
+  }
+
+  .loginButtonsBoxAdmin button{
+    font-size: 12px;
+    padding: 8px 10px;
+    min-width: 30px;
+  }
+
+  .logoBox{
+    margin-left: 0;
+  }
+
+  .loginButtonsBox{
+    margin-right: 0;
+  }
+
+  .linkRouter button{
+    padding: 0 5px;
+  }
+
+  .loginButtonsBox button{
+    justify-content: flex-end;
+  }
+
+  .linkRouter{
+    font-size: 16px;
+  }
+
+  .linkRouter button{
+    font-size: 12px;
+    font-family: montserratbold;
+    padding: 0px 10px;
+  }
+
+  .userHeader{
+    height: 70px;
+  }
+
+  .headerImgs{
+    width: 18px;
+    height: 18px;
+  }
+
+  .logoImageHeader{
+    width: 120px;
+  }
+
+  .iconBackground{
+    width: 18px !important;
+    height: 18px !important;
+  }
+}
+
+@media (max-width: 768px)
+{
+  .linkRouter button{
+    font-size: 12px;
+    font-family: montserratbold;
+    padding: 0px 10px;
+  }
+
+  .userHeader{
+    height: 50px;
+  }
+
+  .headerImgs{
+    width: 18px;
+    height: 18px;
+  }
+
+  .logoImageHeader{
+    width: 120px;
+  }
+
+  .iconBackground{
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .logoBox{
+    margin-left: 0px;
+  }
+
+  .loginButtonsBox {
+    margin-right: 0px;
+  }
+
+  .linkRouter button span {
+    font-size: 12px;
+  }
+
+  .searchIcon{
+    width: 15px;
+  }
+}
+
+@media (max-width: 767px){
+
+  .userDashboardContainer{
+    overflow-x: auto;
+  }
+
+  .rowfix.row
+  {
+    position: static ;
+    width:  100%;
+  }
+
+  .constituencyDetailContainer .filterCandidate{
+    height: 75vh;
+    background-color: white;
+    top: 130px;
+  }
+  .aboutUsBanner{
+    height: 200px;
+  }
+
+  .aboutUsBannerImage{
+    width: 100%;
+  }
+
+  .assetValueSize
+  {
+    width: 650px;
+  }
+
+  .buttonContainer{
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .candidateProfileContainer .contentContainer
+  {
+      width:100%;
+      margin-top: 20px;
+  }
+
+  .candidateProfileContainer .flexCardProfile{
+    width: 100%;
+    position: static;
+    box-shadow: rgb(107, 106, 106) 0px 1px 6px 0px;
+  }
+
+  .candidateProfileContainer .flexCardContainer{
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .partyProfileSection .contentContainer
+  {
+      width: 100%;
+      margin-top: 20px;
+  }
+
+  .userDashboardProfileContainer {
+    width: 210px;
+    float: none;
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+  .userDashboardSection .contentContainer
+  {
+    box-shadow: none;
+  }
+
+  .contentContainerDashboard
+  {
+    width: 100%;
+  }
+
+  .userDashboardSection.partyProfileSection{
+    overflow-x: auto;
+  }
+
+  .partyProfileSection .flexCardProfile{
+    width: 100%;
+    position: static;
+    box-shadow: rgb(107, 106, 106) 0px 1px 6px 0px;
+  }
+
+  .partyProfileSection .flexCardContainer{
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .constituencyContainer .filterCandidateContainer {
+    width: 275px;
+    visibility: hidden;;
+    position: absolute;
+    z-index: 1;
+
+    background-color: #fff;
+  }
+
+  .constituencyContainer .filterCandidateContainerHideShow {
+    width: 300px;
+    visibility: visible;
+    position: absolute;
+    top: -15px;
+    z-index: 1;
+    background-color: #fff;
+  }
+
+  .showHide {
+    background: transparent;
+    border: inline;
+    border: 0px;
+    display: initial;
+    margin-right: 32px;
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+  }
+
+  .select{
+    margin-top: 2px;
+  }
+
+  .criminalBox {
+    background-color: red;
+    background:  red;
+  }
+
+  .constituencyContainer .allCandidateContainer{
+    left: 0px;
+    width: 100%;
+  }
+
+  @media (min-width: 471px) and (max-width: 767px)
+  {
+    .rowfix.row{
+      position: static ;
+      width:  100%;
+    }
+
+    .partyProfileSection .commentShow {
+      border-right: 0px solid grey;
+    }
+
+    .candidateProfileContainer .commentShow{
+      border-right: 0px solid grey;
+    }
+
+    .fourItemTopContainer .borderRadiusCard{
+      bottom: auto;
+    }
+
+    .profileBorder{
+      border-right: 0px;
+    }
+  }
+}
+
+@media only screen and (max-width : 650px)
+{
+  .scrollableHeader{
+    width: 635px;
+  }
+
+  .fixedMediumHeader
+  {
+    overflow-x: auto;
+    overflow-y: auto;
+  }
+
+  .fixedMediumHeader::-webkit-scrollbar
+  {
+    height: 0px;
+  }
+
+  .fourItemTopContainer .borderRadiusCard{
+    bottom: auto;
+  }
+
+  .siteFeedbackContainer{
+    display: none;
+  }
+
+  .footerContainer{
+    display: none;
+  }
+}
+
+@media only screen and (max-width : 550px) {
+  .rowfix.row
+  {
+    position: static ;
+    width:  100%;
+  }
+
+  .globalSearchHideFunc.globalSearchHide{
+    display: none !important;
+  }
+
+  .searchIcon{
+    display: flex;
+  }
+
+  .scrollableHeaderUser{
+    width: 535px;
+  }
+
+  @media only screen and (max-width : 530px)
+  {
+    .innerFooter{
+      bottom: 50px;
+    }
+    
+    .lastFooterContent{
+      height: 52px;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .loginCont{
+    height: 80%;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+/* Quill custom css */
+.ql-editor iframe{
+  width: 100%;
+  min-height: 300px
+}
+
+strong{
+  font-weight: bold;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <script src="/bundle.js"></script>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <meta property="og:image" content="https://i.imgur.com/RSIAvPA.png" >
+    <!-- 
+    
+    <meta property="og:type" content="video.movie">
+    <meta property="og:video:type" content="application/x-shockwave-flash">
+    <meta property="og:video:width" content="398">
+    <meta property="og:video:height" content="224">
+    <meta property="og:site_name" content="YouTube">
+  
+    <meta property='og:video' content='https://www.youtube.com/watch?v=a81eP2E8MEQ&start_radio=1&list=RDa81eP2E8MEQ' > -->
+    <title>Apna Neta</title>
+    
+    <script>
+      window.fbAsyncInit = function() {
+      FB.init({
+        appId            : '303843757127561',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v2.10'
+      });
+      FB.AppEvents.logPageView();
+      };
+     
+      (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+  </head>
+ 
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+
+    <style>
+      
+  .MuiInput-underline-24:hover:not(.MuiInput-disabled-23):not(.MuiInput-focused-22):not(.MuiInput-error-25):before { border-bottom: 2px solid rgb(255, 255, 255) !important; }
+  ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+          padding: 2px 0;
+          background-color: white;
+      }
+
+      ::-webkit-scrollbar {
+          width: 15px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+          box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+          background-color: #FEF8DF;
+      }
+
+
+  </style>
+
+    <div id="root"></div>
+  </body>
+</html>

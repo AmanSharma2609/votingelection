@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="250" height="250" viewBox="0 0 250 250">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.395" x2="0.53" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#5e8fdb"/>
+      <stop offset="1" stop-color="#1f4a87"/>
+    </linearGradient>
+  </defs>
+  <g id="facebook_footer" transform="translate(14628 -3504)">
+    <path id="Path_1287" data-name="Path 1287" class="cls-1" d="M40,0H210a40,40,0,0,1,40,40V210a40,40,0,0,1-40,40H40A40,40,0,0,1,0,210V40A40,40,0,0,1,40,0Z" transform="translate(-14628 3504)"/>
+    <path id="facebook" class="cls-2" d="M128.986,76.086h15.659v64.467a2.3,2.3,0,0,0,2.3,2.3H173.5a2.3,2.3,0,0,0,2.3-2.3V76.39h18a2.3,2.3,0,0,0,2.289-2.041l2.734-23.734a2.3,2.3,0,0,0-2.289-2.568H175.806V33.17c0-4.485,2.415-6.759,7.178-6.759h13.557a2.3,2.3,0,0,0,2.3-2.3V2.321a2.3,2.3,0,0,0-2.3-2.3H177.857C177.726.011,177.433,0,177,0c-3.242,0-14.511.636-23.412,8.825-9.863,9.075-8.492,19.94-8.164,21.824v17.4H128.986a2.3,2.3,0,0,0-2.3,2.3V73.781A2.3,2.3,0,0,0,128.986,76.086Z" transform="translate(-14665.395 3557.572)"/>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg id="phone" xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 250 250">
+  <g id="Group_1037" data-name="Group 1037">
+    <path id="Path_205" data-name="Path 205" d="M31.25,0A31.25,31.25,0,1,0,62.5,31.25,31.288,31.288,0,0,0,31.25,0Z" fill="#a5a5a5"/>
+    <path id="Path_206" data-name="Path 206" d="M31.25,192A31.25,31.25,0,1,0,62.5,223.25,31.288,31.288,0,0,0,31.25,192Z" transform="translate(0 -98.25)" fill="#a5a5a5"/>
+    <path id="Path_207" data-name="Path 207" d="M31.25,384A31.25,31.25,0,1,0,62.5,415.25,31.289,31.289,0,0,0,31.25,384Z" transform="translate(0 -196.5)" fill="#a5a5a5"/>
+    <path id="Path_208" data-name="Path 208" d="M223.25,0A31.25,31.25,0,1,0,254.5,31.25,31.288,31.288,0,0,0,223.25,0Z" transform="translate(-98.25)" fill="#a5a5a5"/>
+    <path id="Path_209" data-name="Path 209" d="M223.25,192a31.25,31.25,0,1,0,31.25,31.25A31.288,31.288,0,0,0,223.25,192Z" transform="translate(-98.25 -98.25)" fill="#a5a5a5"/>
+    <path id="Path_210" data-name="Path 210" d="M223.25,384a31.25,31.25,0,1,0,31.25,31.25A31.289,31.289,0,0,0,223.25,384Z" transform="translate(-98.25 -196.5)" fill="#a5a5a5"/>
+    <path id="Path_211" data-name="Path 211" d="M415.25,62.5A31.25,31.25,0,1,0,384,31.25,31.288,31.288,0,0,0,415.25,62.5Z" transform="translate(-196.5)" fill="#a5a5a5"/>
+    <path id="Path_212" data-name="Path 212" d="M415.25,192a31.25,31.25,0,1,0,31.25,31.25A31.289,31.289,0,0,0,415.25,192Z" transform="translate(-196.5 -98.25)" fill="#a5a5a5"/>
+    <path id="Path_213" data-name="Path 213" d="M415.25,384a31.25,31.25,0,1,0,31.25,31.25A31.289,31.289,0,0,0,415.25,384Z" transform="translate(-196.5 -196.5)" fill="#a5a5a5"/>
+  </g>
+</svg>

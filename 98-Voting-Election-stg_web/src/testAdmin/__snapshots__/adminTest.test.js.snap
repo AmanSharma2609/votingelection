@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login component Login: renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): ShallowWrapper {
+    Symbol(enzyme.__root__): [Circular],
+    Symbol(enzyme.__unrendered__): <WithStyles(withRouter(LoginPage)) />,
+    Symbol(enzyme.__renderer__): Object {
+      "batchedUpdates": [Function],
+      "getNode": [Function],
+      "render": [Function],
+      "simulateError": [Function],
+      "simulateEvent": [Function],
+      "unmount": [Function],
+    },
+    Symbol(enzyme.__node__): Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "classes": Object {
+          "buttonLogin": "withRouter-LoginPage--buttonLogin-5",
+          "container": "withRouter-LoginPage--container-1",
+          "resize": "withRouter-LoginPage--resize-4",
+          "textFieldInput1": "withRouter-LoginPage--textFieldInput1-2",
+          "textFieldInput2": "withRouter-LoginPage--textFieldInput2-3",
+        },
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+    Symbol(enzyme.__nodes__): Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "classes": Object {
+            "buttonLogin": "withRouter-LoginPage--buttonLogin-5",
+            "container": "withRouter-LoginPage--container-1",
+            "resize": "withRouter-LoginPage--resize-4",
+            "textFieldInput1": "withRouter-LoginPage--textFieldInput1-2",
+            "textFieldInput2": "withRouter-LoginPage--textFieldInput2-3",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    Symbol(enzyme.__options__): Object {
+      "adapter": ReactSixteenAdapter {
+        "options": Object {
+          "enableComponentDidUpdateOnSetState": true,
+          "lifecycles": Object {
+            "componentDidUpdate": Object {
+              "onSetState": true,
+            },
+            "getDerivedStateFromProps": true,
+            "getSnapshotBeforeUpdate": true,
+            "setState": Object {
+              "skipsComponentDidUpdateOnNullish": true,
+            },
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__unrendered__): null,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): undefined,
+  Symbol(enzyme.__nodes__): Array [],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__rootNodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "classes": Object {
+          "buttonLogin": "withRouter-LoginPage--buttonLogin-5",
+          "container": "withRouter-LoginPage--container-1",
+          "resize": "withRouter-LoginPage--resize-4",
+          "textFieldInput1": "withRouter-LoginPage--textFieldInput1-2",
+          "textFieldInput2": "withRouter-LoginPage--textFieldInput2-3",
+        },
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+}
+`;
